@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
+    <script>
+    (function(){
+        var d=window.location.origin+window.location.pathname;
+        var b=window.location.origin;
+        var c=document.querySelector('link[rel="canonical"]');
+        if(c)c.href=d;
+        var og=document.querySelectorAll('meta[property="og:url"]');
+        og.forEach(function(m){m.content=d;});
+        var ogi=document.querySelectorAll('meta[property="og:image"]');
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        var twi=document.querySelectorAll('meta[name="twitter:image"]');
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        // Fix JSON-LD schemas
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+            try{
+                var j=JSON.parse(s.textContent);
+                var fix=function(o){
+                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
+                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    }
+                    if(Array.isArray(o))return o.map(fix);
+                    if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
+                    return o;
+                };
+                s.textContent=JSON.stringify(fix(j),null,0);
+            }catch(e){}
+        });
+    })();
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太極拳保持長者關節靈活：每日柔軟操 | 林燦平太極學會養生專欄</title>
