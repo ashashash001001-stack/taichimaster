@@ -911,13 +911,6 @@ blog_html = f'''<!DOCTYPE html>
         </div>
     </section>
 
-    <!-- 標籤雲 -->
-    <section class="max-w-6xl mx-auto px-4 pb-6">
-        <div class="flex flex-wrap gap-2 justify-center" id="tag-cloud">
-            {"".join([f'<span class="tag-chip" data-tag="{html.escape(tag)}" title="{tag_counts[tag]} 篇文章">{html.escape(tag)}</span>' for tag in all_tags])}
-        </div>
-    </section>
-
     <!-- 文章列表 -->
     <section class="max-w-6xl mx-auto px-4 pb-20">
         <div id="results-info" class="text-center text-gray-500 mb-6"></div>
@@ -941,7 +934,6 @@ blog_html = f'''<!DOCTYPE html>
     const allCategories = {categories_json};
 
     let activeCategory = "全部";
-    let activeTags = new Set();
     let searchQuery = "";
 
     function renderArticles() {{
@@ -951,7 +943,6 @@ blog_html = f'''<!DOCTYPE html>
 
         let filtered = articles.filter(a => {{
             if (activeCategory !== "全部" && a.category !== activeCategory) return false;
-            if (activeTags.size > 0 && ![...activeTags].some(t => a.tags.includes(t))) return false;
             if (searchQuery) {{
                 const q = searchQuery.toLowerCase();
                 return a.title.toLowerCase().includes(q) || a.summary.toLowerCase().includes(q) || a.tags.some(t => t.toLowerCase().includes(q)) || a.category.toLowerCase().includes(q);
@@ -987,16 +978,13 @@ blog_html = f'''<!DOCTYPE html>
     }}
 
     function bindTagClicks() {{
-        document.querySelectorAll(".tag-chip[data-tag]").forEach(el => {{
+        document.querySelectorAll(".article-card .tag-chip[data-tag]").forEach(el => {{
             el.addEventListener("click", (e) => {{
                 e.preventDefault();
                 e.stopPropagation();
                 const tag = el.getAttribute("data-tag");
-                if (activeTags.has(tag)) activeTags.delete(tag);
-                else activeTags.add(tag);
-                document.querySelectorAll("#tag-cloud .tag-chip").forEach(t => {{
-                    t.classList.toggle("active", activeTags.has(t.getAttribute("data-tag")));
-                }});
+                document.getElementById("search-input").value = tag;
+                searchQuery = tag;
                 renderArticles();
             }});
         }});
