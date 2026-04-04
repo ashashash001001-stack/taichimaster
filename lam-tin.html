@@ -56,7 +56,7 @@
             <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">藍田太極班推薦<br/><span class="text-emerald-400">油塘實體課程，歡迎初學者</span></h1>
             <p class="text-lg text-emerald-200 mb-8 max-w-2xl mx-auto">林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。從藍田出發，交通便利，歡迎任何年齡人士參加。</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E4%BD%8F%E5%9C%A8藍田%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E7%8F%AD%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition flex items-center justify-center"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢</a>
+                <a href="#" id="region-wa" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition flex items-center justify-center"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢</a>
                 <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded-lg transition flex items-center justify-center">了解課程詳情</a>
             </div>
         </div>
@@ -152,7 +152,7 @@
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">準備好開始您的太極之旅嗎？</h2>
             <p class="text-emerald-200 mb-8">歡迎隨時親臨油塘觀課，滿意再報名！</p>
-            <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E4%BD%8F%E5%9C%A8藍田%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E7%8F%AD%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢報名</a>
+            <a href="#" id="region-wa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢報名</a>
         </div>
     </section>
 
@@ -162,6 +162,11 @@
         <p class="mt-2"><a href="index.html" class="text-emerald-400 hover:text-emerald-300">返回首頁</a></p>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+        const _url = window.location.href;
+        const _wa = document.getElementById('region-wa');
+        if (_wa) _wa.href = 'https://wa.me/85260985742?text=' + encodeURIComponent('你好，林師傅！我在網頁看到太極班招生，想查詢更多詳情。');
+    </script>
 </body>
 </html>
