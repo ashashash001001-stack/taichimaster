@@ -153,7 +153,7 @@
 
     function sortArticles(list) {
         const sorted = [...list];
-        if (activeSort === "popular") sorted.sort((a, b) => (b.viewWeight || Math.random()*500) - (a.viewWeight || Math.random()*500));
+        if (activeSort === "popular") sorted.sort((a, b) => (b.viewWeight || 0) - (a.viewWeight || 0));
         else if (activeSort === "latest") sorted.sort((a, b) => b.id - a.id);
         else if (activeSort === "az") sorted.sort((a, b) => a.title.localeCompare(b.title, 'zh-HK'));
         return sorted;
@@ -171,7 +171,7 @@
                 return a.title.toLowerCase().includes(q) || a.summary.toLowerCase().includes(q) || a.tags.some(t => t.toLowerCase().includes(q)) || a.category.toLowerCase().includes(q);
             }
             return true;
-        });
+        }));
 
         resultsInfo.textContent = `顯示 ${filtered.length} / ${articles.length} 篇文章`;
 
