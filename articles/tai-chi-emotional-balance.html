@@ -13,7 +13,6 @@
         ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
         twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
-        // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
@@ -30,7 +29,6 @@
         });
     })();
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太極拳平衡情緒：陰陽哲學在日常生活中的應用 | 林燦平太極學會養生專欄</title>
@@ -48,13 +46,14 @@
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "太極拳平衡情緒：陰陽哲學在日常生活中的應用", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-emotional-balance.html", "inLanguage": "zh-HK"}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://chungyuicheung.github.io/taichimaster/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 3, "name": "心理健康", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 4, "name": "太極拳平衡情緒：陰陽哲學在日常生活中的應用", "item": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-emotional-balance.html"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -63,19 +62,39 @@
             <a href="../index.html" class="text-xl font-bold text-emerald-800 border-2 border-emerald-800 p-1 rounded">林師傅</a>
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
-    </nav><nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb"><ol class="flex items-center text-sm text-gray-500 space-x-2"><li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li><li class="text-gray-400">›</li><li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li><li class="text-gray-400">›</li><li class="text-gray-800 font-medium truncate max-w-xs">太極拳平衡情緒：陰陽哲學在日常生活中的應用...</li></ol></nav>
+    </nav>
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">太極拳平衡情緒：陰陽哲學在日常生活中的應用...</li>
+        </ol>
+    </nav>
     <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">心理健康</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">太極拳平衡情緒：陰陽哲學在日常生活中的應用</h1>
             <p class="text-gray-600 text-lg leading-relaxed">太極拳的陰陽哲學不僅適用於武術，更能幫助我們保持情緒平衡。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="情緒">情緒</span><span class="tag-chip" data-tag="平衡">平衡</span><span class="tag-chip" data-tag="陰陽">陰陽</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="哲學">哲學</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
         <span class="text-sm text-gray-500">分享：</span>
         <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
         <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
         <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
     </div></div>
-        </header><div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
+        </header>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">太極拳的核心理念是陰陽平衡。陰代表柔、靜、內；陽代表剛、動、外。太極拳追求的不是純粹的陰或陽，而是兩者的動態平衡。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">都市人的心理壓力</h2><p class="text-gray-700 leading-relaxed mb-4">現代都市人面臨工作、家庭、財務等多重壓力，長期壓力會導致焦慮、失眠和抑鬱。</p><ul class="list-disc list-inside space-y-1 mb-4 text-gray-700"><li>副交感神經</li><li>內啡肽</li><li>血清素</li></ul><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">太極拳如何改善心理狀態</h2><p class="text-gray-700 leading-relaxed mb-4">太極拳能激活副交感神經系統，降低皮質醇水平，促進內啡肽分泌，從生理層面改善心理狀態。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">實證研究</h2><p class="text-gray-700 leading-relaxed mb-4">多項研究證實，練習太極拳8週後，參與者的壓力荷爾蒙水平下降25%，焦慮評分顯著改善。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「很多學員來找我，不是因為身體痛，而是因為心累。」林燦平師傅分享道，「有個金融業的學生告訴我，他每天放工來練太極，練完之後覺得成個人鬆晒，返到屋企終於可以好好陪家人。太極拳的減壓效果，是很多學員意想不到的收穫。在課堂上，我不只教動作，更教學員如何放鬆、如何呼吸、如何讓心靜下來。這些看似簡單的技巧，對現代人的心理健康非常有幫助。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">這個理念同樣適用於情緒管理。當我們感到憤怒（陽）時，需要引入陰的元素。當我們感到沮喪（陰）時，需要引入陽的元素。</p><p class="text-gray-700 leading-relaxed mb-4">練習太極拳能幫助我們體會這種平衡。在每一招每一式中，我們都在練習剛柔並濟、動靜結合。這種身體的訓練會逐漸影響我們的心理模式。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-stress-relief.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">心理健康</span><h4 class="text-sm font-bold text-gray-900">太極拳減壓科學：如何透過太極釋放都市壓力</h4></a><a href="tai-chi-anxiety.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">心理健康</span><h4 class="text-sm font-bold text-gray-900">太極拳對抗焦慮症：自然平靜的力量</h4></a><a href="tai-chi-meditation.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">心理健康</span><h4 class="text-sm font-bold text-gray-900">太極拳就是移動的冥想：動中求靜的藝術</h4></a></div></div>
+        <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
             <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E5%9C%A8%E7%B6%B2%E9%A0%81%E7%9C%8B%E5%88%B0%E5%A4%AA%E6%A5%B5%E7%8F%AD%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%9B%B4%E5%A4%9A%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition">WhatsApp 查詢報名</a>
@@ -84,9 +103,11 @@
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
     <script>
         lucide.createIcons();
-        // Dynamic share URLs
         const _url = window.location.href;
         const _title = document.title;
         const _wa = document.getElementById('share-wa');

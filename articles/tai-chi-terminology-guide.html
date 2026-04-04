@@ -13,7 +13,6 @@
         ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
         twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
-        // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
@@ -30,7 +29,6 @@
         });
     })();
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太極拳常用術語辭典：初學者必知的30個名詞 | 林燦平太極學會養生專欄</title>
@@ -48,13 +46,14 @@
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "太極拳常用術語辭典：初學者必知的30個名詞", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-terminology-guide.html", "inLanguage": "zh-HK"}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://chungyuicheung.github.io/taichimaster/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 3, "name": "太極入門", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 4, "name": "太極拳常用術語辭典：初學者必知的30個名詞", "item": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-terminology-guide.html"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -63,19 +62,39 @@
             <a href="../index.html" class="text-xl font-bold text-emerald-800 border-2 border-emerald-800 p-1 rounded">林師傅</a>
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
-    </nav><nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb"><ol class="flex items-center text-sm text-gray-500 space-x-2"><li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li><li class="text-gray-400">›</li><li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li><li class="text-gray-400">›</li><li class="text-gray-800 font-medium truncate max-w-xs">太極拳常用術語辭典：初學者必知的30個名詞...</li></ol></nav>
+    </nav>
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">太極拳常用術語辭典：初學者必知的30個名詞...</li>
+        </ol>
+    </nav>
     <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">太極入門</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">太極拳常用術語辭典：初學者必知的30個名詞</h1>
             <p class="text-gray-600 text-lg leading-relaxed">太極拳有很多專用術語，如「掤捋擠按」、「虛實」、「樁功」等。本文解釋常用術語。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="術語">術語</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="辭典">辭典</span><span class="tag-chip" data-tag="初學者">初學者</span><span class="tag-chip" data-tag="知識">知識</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
         <span class="text-sm text-gray-500">分享：</span>
         <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
         <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
         <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
     </div></div>
-        </header><div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
+        </header>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">學習太極拳時，經常會聽到一些專有名詞。了解這些術語的含義，能幫助你更好地理解師傅的教導。</p><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">什麼是太極拳？</h2><p class="text-gray-700 leading-relaxed mb-4">太極拳起源於中國，是一種結合了武術、養生和哲學的傳統運動。它以緩慢柔和的動作、深呼吸和冥想為特徵，被譽為「移動的冥想」。</p><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">太極拳的基本原理</h2><p class="text-gray-700 leading-relaxed mb-4">太極拳的核心在於陰陽平衡、以柔克剛。練習時要求放鬆身心、保持中正、以腰為軸、虛實分明。</p><ul class="list-disc list-inside space-y-2 mb-4 text-gray-700"><li><strong>楊氏太極</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>陳氏太極</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>樁功</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>步法</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>呼吸法</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li></ul><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">初學者常見問題</h2><p class="text-gray-700 leading-relaxed mb-4">解答初學者最關心的問題，包括裝備、練習時間、學習進度等。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「我教了三十多年太極，發現很多初學者最大的問題不是學不會，而是太心急。」林燦平師傅說，「太極拳是一輩子的功夫，不要急著學完整套拳。先把基本功練好，每一個動作做到位，比學十套拳都有用。我經常跟學員說：慢就是快。在油塘的課堂上，我從站樁開始教起，讓學員先感受身體的重心和呼吸，然後才慢慢過渡到動作。這樣學出來的太極，才是紮實的。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">太極：源自《易經》，指宇宙萬物的本源。太極拳取其陰陽平衡、剛柔相濟之意。</p><p class="text-gray-700 leading-relaxed mb-4">樁功：站樁的功夫，是太極拳的基本功。通過靜立姿勢，訓練下盤穩定和內氣運行。</p><p class="text-gray-700 leading-relaxed mb-4">掤捋擠按：太極拳的四種基本手法，也是推手的基礎。</p><p class="text-gray-700 leading-relaxed mb-4">虛實：重心所在的腳為「實」，另一腳為「虛」。虛實分明是太極拳基本要求。</p><p class="text-gray-700 leading-relaxed mb-4">鬆：放鬆，不是軟弱無力，而是去除不必要的緊張。</p><p class="text-gray-700 leading-relaxed mb-4">沉肩墜肘：肩膀放鬆下沉，肘部自然下垂。這是太極拳的基本身型要求。</p><p class="text-gray-700 leading-relaxed mb-4">含胸拔背：胸部微微內含，背部自然挺拔。</p><p class="text-gray-700 leading-relaxed mb-4">氣沉丹田：將氣息引導至下腹部（丹田），有助於穩定重心。</p><p class="text-gray-700 leading-relaxed mb-4">行雲流水：形容太極拳動作連貫流暢，沒有停頓。</p><p class="text-gray-700 leading-relaxed mb-4">以腰為軸：腰部是全身運動的主宰，所有動作都應該由腰部帶動。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-beginner-guide.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳入門指南：初學者必讀的10個基本概念</h4></a><a href="tai-chi-vs-qigong-difference.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳與氣功的分別：兩者有何不同？</h4></a><a href="yang-style-tai-chi-introduction.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">楊氏太極拳介紹：最流行的太極流派</h4></a></div></div>
+        <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
             <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E5%9C%A8%E7%B6%B2%E9%A0%81%E7%9C%8B%E5%88%B0%E5%A4%AA%E6%A5%B5%E7%8F%AD%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%9B%B4%E5%A4%9A%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition">WhatsApp 查詢報名</a>
@@ -84,9 +103,11 @@
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
     <script>
         lucide.createIcons();
-        // Dynamic share URLs
         const _url = window.location.href;
         const _title = document.title;
         const _wa = document.getElementById('share-wa');

@@ -13,7 +13,6 @@
         ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
         twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
-        // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
@@ -30,7 +29,6 @@
         });
     })();
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>太極劍對健康的獨特好處：不只是好看 | 林燦平太極學會養生專欄</title>
@@ -48,13 +46,14 @@
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "太極劍對健康的獨特好處：不只是好看", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sword-health.html", "inLanguage": "zh-HK"}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://chungyuicheung.github.io/taichimaster/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 3, "name": "器械教學", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 4, "name": "太極劍對健康的獨特好處：不只是好看", "item": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sword-health.html"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -63,19 +62,39 @@
             <a href="../index.html" class="text-xl font-bold text-emerald-800 border-2 border-emerald-800 p-1 rounded">林師傅</a>
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
-    </nav><nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb"><ol class="flex items-center text-sm text-gray-500 space-x-2"><li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li><li class="text-gray-400">›</li><li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li><li class="text-gray-400">›</li><li class="text-gray-800 font-medium truncate max-w-xs">太極劍對健康的獨特好處：不只是好看...</li></ol></nav>
+    </nav>
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">太極劍對健康的獨特好處：不只是好看...</li>
+        </ol>
+    </nav>
     <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">器械教學</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">太極劍對健康的獨特好處：不只是好看</h1>
             <p class="text-gray-600 text-lg leading-relaxed">太極劍不僅動作優美，對健康也有獨特的好處。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="太極劍">太極劍</span><span class="tag-chip" data-tag="健康">健康</span><span class="tag-chip" data-tag="好處">好處</span><span class="tag-chip" data-tag="器械">器械</span><span class="tag-chip" data-tag="鍛鍊">鍛鍊</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
         <span class="text-sm text-gray-500">分享：</span>
         <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
         <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
         <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
     </div></div>
-        </header><div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
+        </header>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">很多人以為太極劍只是為了表演，但其實它對健康有很多獨特的好處。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">器械簡介</h2><p class="text-gray-700 leading-relaxed mb-4">太極器械是太極拳體系的重要組成部分，包括劍、刀、扇、鞭桿等。</p><ul class="list-disc list-inside space-y-1 mb-4 text-gray-700"><li>百兵之君</li><li>白蠟桿</li><li>腕力</li></ul><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">基本握法/姿勢</h2><p class="text-gray-700 leading-relaxed mb-4">正確的器械握法是學習的第一步，要求「活把握持」，不要握得太緊。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">學習要點</h2><p class="text-gray-700 leading-relaxed mb-4">學習器械前應先掌握太極拳的基本功，確保重心轉移和腰部旋轉正確。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「學器械之前，一定要先把拳術的基本功練好。」林燦平師傅強調，「我見過很多學生急著學劍學刀，但連基本的重心轉移都做不好，結果器械練得歪歪斜斜。我的教學順序一定是：先拳、後器械。基本功紮實了，學器械自然水到渠成。在林燦平太極學會，我們教授太極劍、太極刀、太極扇和鞭桿四種器械。每種器械都有其獨特的魅力和好處。」</p>
+    </div><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">常見錯誤</h2><p class="text-gray-700 leading-relaxed mb-4">初學者常犯的錯誤包括握得太緊、動作僵硬、忽略基本功等。</p><p class="text-gray-700 leading-relaxed mb-4">一、手腕鍛鍊：太極劍要求手腕靈活運用，能增強手腕的力量和靈活性。二、協調性：劍的重量和長度增加了動作的難度。三、專注力：練習太極劍需要高度專注。四、姿勢：太極劍要求身體挺拔。五、認知功能：學習劍的套路能刺激大腦。</p><p class="text-gray-700 leading-relaxed mb-4">林燦平太極學會的太極劍課程深受學員歡迎，許多學員表示練劍比練拳更有趣。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-sword-basics.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極劍入門：初學者必知的基礎知識</h4></a><a href="tai-chi-fan-techniques.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極扇教學：剛柔並濟的優美器械</h4></a><a href="tai-chi-broadsword.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極刀入門：剛猛有力的太極器械</h4></a></div></div>
+        <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
             <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E5%9C%A8%E7%B6%B2%E9%A0%81%E7%9C%8B%E5%88%B0%E5%A4%AA%E6%A5%B5%E7%8F%AD%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%9B%B4%E5%A4%9A%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition">WhatsApp 查詢報名</a>
@@ -84,9 +103,11 @@
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
     <script>
         lucide.createIcons();
-        // Dynamic share URLs
         const _url = window.location.href;
         const _title = document.title;
         const _wa = document.getElementById('share-wa');
