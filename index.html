@@ -9,6 +9,8 @@
     <meta name="author" content="林燦平太極學會">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -122,9 +124,15 @@
     <!-- 引入 Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.fade-visible { opacity: 1; transform: translateY(0); }
+        .faq-answer { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; }
+        .faq-item.open .faq-answer { max-height: 500px; opacity: 1; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .schedule-card { transition: opacity 0.3s ease; }
+        @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(5,150,105,0.4); } 70% { box-shadow: 0 0 0 10px rgba(5,150,105,0); } 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0); } }
+        .pulse-cta { animation: pulse-ring 2s infinite; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -146,7 +154,7 @@
                     <a href="blog.html" class="text-gray-600 hover:text-emerald-700 transition py-2">養生專欄</a>
                     <a href="#schedule" class="text-gray-600 hover:text-emerald-700 transition py-2">上課地點</a>
                     <a href="#reviews" class="text-gray-600 hover:text-emerald-700 transition py-2">學員見證</a>
-                    <a href="#contact" class="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-lg">
+                    <a href="#contact" class="bg-emerald-700 text-white px-5 py-2 rounded-full hover:bg-emerald-800 transition shadow-lg pulse-cta">
                         致電查詢
                     </a>
                 </div>
@@ -221,6 +229,7 @@
                         <img 
                             src="solo.jpg" 
                             alt="林燦平師傅示範楊氏太極拳" 
+                            loading="lazy"
                             class="w-full h-full object-cover hover:scale-105 transition duration-700"
                         />
                     </div>
@@ -267,22 +276,46 @@
         </div>
     </section>
 
+    <!-- 信任徽章 -->
+    <section class="py-12 bg-emerald-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="fade-in">
+                    <div class="text-4xl font-bold text-emerald-800 mb-1">30+</div>
+                    <div class="text-gray-600 text-sm">年教學經驗</div>
+                </div>
+                <div class="fade-in" style="transition-delay:0.1s">
+                    <div class="text-4xl font-bold text-emerald-800 mb-1">200+</div>
+                    <div class="text-gray-600 text-sm">學員人數</div>
+                </div>
+                <div class="fade-in" style="transition-delay:0.2s">
+                    <div class="text-4xl font-bold text-emerald-800 mb-1">7</div>
+                    <div class="text-gray-600 text-sm">天每週課程</div>
+                </div>
+                <div class="fade-in" style="transition-delay:0.3s">
+                    <div class="text-4xl font-bold text-emerald-800 mb-1">5⭐</div>
+                    <div class="text-gray-600 text-sm">學員滿意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 3. 為什麼學太極 (Benefits) -->
     <section class="py-16 bg-emerald-900 text-white">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-12">太極拳與器械的益處</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition">
+                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition fade-in">
                     <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">💪</div>
                     <h3 class="text-xl font-bold mb-3">全面鍛鍊</h3>
                     <p class="text-emerald-100">除拳術外，透過練習刀、劍、扇等器械，能更全面地鍛鍊身體協調性與專注力。適合辦公室人士改善肩頸僵硬。</p>
                 </div>
-                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition">
+                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition fade-in" style="transition-delay:0.1s">
                     <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🧘</div>
                     <h3 class="text-xl font-bold mb-3">舒緩壓力</h3>
                     <p class="text-emerald-100">配合呼吸法，能有效降低皮質醇水平，改善焦慮與失眠，讓大腦徹底放鬆。對長期伏案工作引起的腰背痛有顯著幫助。</p>
                 </div>
-                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition">
+                <div class="p-6 border border-emerald-700 rounded-xl hover:bg-emerald-800 transition fade-in" style="transition-delay:0.2s">
                     <div class="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🔋</div>
                     <h3 class="text-xl font-bold mb-3">適合任何年齡</h3>
                     <p class="text-emerald-100">課程設計循序漸進，無論男女老幼，有無經驗，均可輕鬆入門。長者練習可強化下肢力量，預防跌倒。</p>
@@ -301,9 +334,9 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- 課程卡片 1 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group fade-in">
                     <div class="h-48 bg-stone-200 relative overflow-hidden">
-                        <img src="class_hall.jpg" alt="油塘太極拳入門班上課環境" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
+                        <img src="class_hall.jpg" alt="油塘太極拳入門班上課環境" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
                         <div class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">適合初學者</div>
                     </div>
                     <div class="p-8">
@@ -318,9 +351,9 @@
                 </div>
 
                 <!-- 課程卡片 2 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group fade-in" style="transition-delay:0.1s">
                     <div class="h-48 bg-stone-200 relative overflow-hidden">
-                        <img src="class_8year.JPG" alt="油塘太極器械班學員上課實況" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
+                        <img src="class_8year.JPG" alt="油塘太極器械班學員上課實況" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">太極器械班</h3>
@@ -334,9 +367,9 @@
                 </div>
 
                 <!-- 課程卡片 3 -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group border-2 border-emerald-100">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group border-2 border-emerald-100 fade-in" style="transition-delay:0.2s">
                     <div class="h-48 bg-stone-200 relative overflow-hidden">
-                        <img src="solo2.jpg" alt="林燦平師傅示範太極劍與太極扇" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
+                        <img src="solo2.jpg" alt="林燦平師傅示範太極劍與太極扇" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">報名與查詢</h3>
@@ -355,6 +388,37 @@
         </div>
     </section>
 
+    <!-- 收費資訊 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">收費詳情</h2>
+                <p class="text-gray-600">透明收費，無隱藏費用</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-stone-50 rounded-2xl p-8 border border-stone-200 text-center fade-in">
+                    <div class="text-3xl mb-3">🥋</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">太極拳班</h3>
+                    <p class="text-gray-600 mb-4">基本拳術課程</p>
+                    <div class="text-3xl font-bold text-emerald-800 mb-2">歡迎查詢</div>
+                    <p class="text-gray-500 text-sm mb-6">按月收費，詳情請致電或 WhatsApp</p>
+                    <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E6%8B%B3%E7%8F%AD%E6%94%B6%E8%B2%BB%E3%80%82" target="_blank" class="inline-block bg-emerald-700 text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition text-sm font-bold">查詢收費</a>
+                </div>
+                <div class="bg-stone-50 rounded-2xl p-8 border border-stone-200 text-center fade-in" style="transition-delay:0.1s">
+                    <div class="text-3xl mb-3">⚔️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">太極器械班</h3>
+                    <p class="text-gray-600 mb-4">刀、劍、扇、鞭桿</p>
+                    <div class="text-3xl font-bold text-emerald-800 mb-2">歡迎查詢</div>
+                    <p class="text-gray-500 text-sm mb-6">按月收費，詳情請致電或 WhatsApp</p>
+                    <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E5%99%A8%E6%A2%B0%E7%8F%AD%E6%94%B6%E8%B2%BB%E3%80%82" target="_blank" class="inline-block bg-emerald-700 text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition text-sm font-bold">查詢收費</a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-gray-500 text-sm fade-in">
+                <p>✅ 可即場報名 ✅ 歡迎隨時觀課 ✅ 滿意才報名</p>
+            </div>
+        </div>
+    </section>
+
     <!-- 5. 上課地點 (Location & Schedule) -->
     <section id="schedule" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
@@ -363,6 +427,11 @@
                 <!-- 左側：文字資訊 -->
                 <div class="w-full md:w-1/2">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">上課地點與時間</h2>
+            <div class="flex gap-2 mb-6">
+                <button class="schedule-filter bg-emerald-700 text-white px-4 py-1.5 rounded-full text-sm font-medium transition" data-filter="all">全部</button>
+                <button class="schedule-filter bg-white text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium border border-stone-200 transition" data-filter="morning">早上班</button>
+                <button class="schedule-filter bg-white text-gray-700 px-4 py-1.5 rounded-full text-sm font-medium border border-stone-200 transition" data-filter="evening">晚上班</button>
+            </div>
                     <p class="text-emerald-700 font-bold mb-4 text-lg">歡迎隨時親臨觀課，滿意再報名！</p>
                     <p class="text-gray-500 mb-2">零基礎亦可旁聽，無需預約。</p>
                     
@@ -378,7 +447,7 @@
                                 <p class="text-gray-600 mt-1 mb-4">環境開揚舒適，適合練習。</p>
                                 
                                 <!-- 時間表 1 -->
-                                <div class="bg-stone-50 p-4 rounded-lg border border-stone-200 mb-3">
+                                <div class="schedule-card bg-stone-50 p-4 rounded-lg border border-stone-200 mb-3" data-period="morning">
                                     <div class="flex items-center mb-2">
                                         <i data-lucide="calendar" class="text-gray-400 mr-2 w-4 h-4"></i>
                                         <span class="font-bold text-gray-700">逢星期一、三、五、六、日</span>
@@ -388,15 +457,11 @@
                                             <i data-lucide="clock" class="text-gray-400 mr-2 w-4 h-4"></i>
                                             <span class="text-gray-600">上午 09:00 - 下午 01:00</span>
                                         </div>
-                                        <div class="flex items-center">
-                                            <i data-lucide="clock" class="text-gray-400 mr-2 w-4 h-4"></i>
-                                            <span class="text-gray-600">晚上 07:00 - 晚上 10:00</span>
-                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- 時間表 2 -->
-                                <div class="bg-stone-50 p-4 rounded-lg border border-stone-200">
+                                <div class="schedule-card bg-stone-50 p-4 rounded-lg border border-stone-200" data-period="morning">
                                     <div class="flex items-center mb-2">
                                         <i data-lucide="calendar" class="text-gray-400 mr-2 w-4 h-4"></i>
                                         <span class="font-bold text-gray-700">逢星期二、四</span>
@@ -412,9 +477,22 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- 晚上班 -->
+                                <div class="schedule-card bg-stone-50 p-4 rounded-lg border border-stone-200 mb-3" data-period="evening">
+                                    <div class="flex items-center mb-2">
+                                        <i data-lucide="calendar" class="text-gray-400 mr-2 w-4 h-4"></i>
+                                        <span class="font-bold text-gray-700">逢星期一至日</span>
+                                    </div>
+                                    <div class="flex flex-col ml-6 space-y-1">
+                                        <div class="flex items-center">
+                                            <i data-lucide="clock" class="text-gray-400 mr-2 w-4 h-4"></i>
+                                            <span class="text-gray-600">晚上 07:00 - 晚上 10:00</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -444,7 +522,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- 見證 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm relative">
+                <div class="bg-white p-8 rounded-2xl shadow-sm relative fade-in">
                     <div class="absolute -top-4 left-8 text-6xl text-emerald-200 font-serif">"</div>
                     <p class="text-gray-600 italic mb-6 relative z-10">
                         以前長期坐寫字樓，腰背好痛。跟林師傅學左三個月，學識放鬆膊頭，背痛真係好左好多，夜晚都好訓左！
@@ -466,7 +544,7 @@
                 </div>
 
                 <!-- 見證 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm relative">
+                <div class="bg-white p-8 rounded-2xl shadow-sm relative fade-in" style="transition-delay:0.1s">
                     <div class="absolute -top-4 left-8 text-6xl text-emerald-200 font-serif">"</div>
                     <p class="text-gray-600 italic mb-6 relative z-10">
                         師傅教得好細心，每一個動作都會解釋原理，除左拳仲學識用扇，非常好玩又實用！
@@ -488,7 +566,7 @@
                 </div>
 
                 <!-- 見證 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm relative md:hidden lg:block">
+                <div class="bg-white p-8 rounded-2xl shadow-sm relative md:hidden lg:block fade-in" style="transition-delay:0.2s">
                     <div class="absolute -top-4 left-8 text-6xl text-emerald-200 font-serif">"</div>
                     <p class="text-gray-600 italic mb-6 relative z-10">
                         原本以為太極好悶，試左一堂之後發現原來好多學問。上堂氣氛好好，每次上完堂都覺得成身鬆哂。
@@ -518,64 +596,95 @@
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">常見問題</h2>
-                <p class="text-gray-600">關於油塘太極班的常見疑問</p>
+                <p class="text-gray-600">點擊展開答案，了解更多詳情</p>
             </div>
-
-            <div class="space-y-6">
-                <!-- FAQ 1 -->
-                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-start">
-                        <span class="text-emerald-600 mr-3 mt-0.5">❓</span>
-                        太極拳適合什麼年齡的人學習？
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed ml-9">
-                        太極拳適合<strong>任何年齡</strong>人士學習。無論您是年輕人、中年人還是長者，初學者還是有經驗者，林燦平太極學會都有適合您的課程。長者練習太極更能強化下肢力量，預防跌倒。
-                    </p>
+            <div class="space-y-3">
+                <div class="faq-item open bg-stone-50 rounded-xl border border-stone-200 overflow-hidden fade-in" style="transition-delay:0.0s">
+                    <button class="faq-toggle w-full text-left p-5 flex items-center justify-between cursor-pointer hover:bg-stone-100 transition">
+                        <span class="font-bold text-gray-900 pr-4">太極拳適合什麼年齡的人學習？</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" style="transform:rotate(180deg)"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5" style="max-height:500px;opacity:1">
+                        <p class="text-gray-600 leading-relaxed">太極拳適合<strong>任何年齡</strong>人士學習。無論您是年輕人、中年人還是長者，初學者還是有經驗者，林燦平太極學會都有適合您的課程。長者練習太極更能強化下肢力量，預防跌倒。</p>
+                        <a href="articles/tai-chi-age-guide.html" class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-medium mt-2">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
                 </div>
-
-                <!-- FAQ 2 -->
-                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-start">
-                        <span class="text-emerald-600 mr-3 mt-0.5">❓</span>
-                        油塘太極班如何報名？
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed ml-9">
-                        歡迎直接在上課時間到<strong>小童群益會前空地</strong>即場報名，或致電/WhatsApp 6098 5742 查詢。亦可隨時親臨觀課，滿意才報名，無需預約。
-                    </p>
+                <div class="faq-item  bg-stone-50 rounded-xl border border-stone-200 overflow-hidden fade-in" style="transition-delay:0.08s">
+                    <button class="faq-toggle w-full text-left p-5 flex items-center justify-between cursor-pointer hover:bg-stone-100 transition">
+                        <span class="font-bold text-gray-900 pr-4">油塘太極班如何報名？</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" style="transform:rotate(0deg)"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5" style="max-height:0;opacity:0">
+                        <p class="text-gray-600 leading-relaxed">歡迎直接在上課時間到<strong>小童群益會前空地</strong>即場報名，或致電/WhatsApp 6098 5742 查詢。亦可隨時親臨觀課，滿意才報名，無需預約。</p>
+                        <a href="articles/how-to-choose-tai-chi-class.html" class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-medium mt-2">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
                 </div>
-
-                <!-- FAQ 3 -->
-                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-start">
-                        <span class="text-emerald-600 mr-3 mt-0.5">❓</span>
-                        太極拳對肩頸痛、腰背痛有幫助嗎？
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed ml-9">
-                        太極拳透過緩慢柔和的動作配合呼吸法，能有效放鬆肩頸肌肉，改善長期坐辦公室引起的腰背疼痛。許多學員在練習數個月後反映痛症明顯減輕，睡眠質素亦有改善。
-                    </p>
+                <div class="faq-item  bg-stone-50 rounded-xl border border-stone-200 overflow-hidden fade-in" style="transition-delay:0.16s">
+                    <button class="faq-toggle w-full text-left p-5 flex items-center justify-between cursor-pointer hover:bg-stone-100 transition">
+                        <span class="font-bold text-gray-900 pr-4">太極拳對肩頸痛、腰背痛有幫助嗎？</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" style="transform:rotate(0deg)"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5" style="max-height:0;opacity:0">
+                        <p class="text-gray-600 leading-relaxed">太極拳透過緩慢柔和的動作配合呼吸法，能有效放鬆肩頸肌肉，改善長期坐辦公室引起的腰背疼痛。許多學員在練習數個月後反映痛症明顯減輕，睡眠質素亦有改善。</p>
+                        <a href="articles/tai-chi-neck-pain-relief.html" class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-medium mt-2">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
                 </div>
-
-                <!-- FAQ 4 -->
-                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-start">
-                        <span class="text-emerald-600 mr-3 mt-0.5">❓</span>
-                        太極班教授什麼內容？
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed ml-9">
-                        本會教授<strong>太極拳、太極刀、太極劍、太極扇及鞭桿</strong>。由基本樁功步法開始，循序漸進學習傳統套路，適合初學者入門。器械班適合已掌握基本拳法的學員。
-                    </p>
+                <div class="faq-item  bg-stone-50 rounded-xl border border-stone-200 overflow-hidden fade-in" style="transition-delay:0.24s">
+                    <button class="faq-toggle w-full text-left p-5 flex items-center justify-between cursor-pointer hover:bg-stone-100 transition">
+                        <span class="font-bold text-gray-900 pr-4">太極班教授什麼內容？</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" style="transform:rotate(0deg)"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5" style="max-height:0;opacity:0">
+                        <p class="text-gray-600 leading-relaxed">本會教授<strong>太極拳、太極刀、太極劍、太極扇及鞭桿</strong>。由基本樁功步法開始，循序漸進學習傳統套路，適合初學者入門。器械班適合已掌握基本拳法的學員。</p>
+                        <a href="articles/tai-chi-beginner-guide.html" class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-medium mt-2">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
                 </div>
-
-                <!-- FAQ 5 -->
-                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-start">
-                        <span class="text-emerald-600 mr-3 mt-0.5">❓</span>
-                        觀塘、將軍澳居民方便來上課嗎？
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed ml-9">
-                        非常適合！本會位於油塘，交通便捷，觀塘區、將軍澳及東九龍居民均可輕鬆到達。上課地點在小童群益會賽馬會油塘青少年綜合服務中心前空地，環境開揚舒適。
-                    </p>
+                <div class="faq-item  bg-stone-50 rounded-xl border border-stone-200 overflow-hidden fade-in" style="transition-delay:0.32s">
+                    <button class="faq-toggle w-full text-left p-5 flex items-center justify-between cursor-pointer hover:bg-stone-100 transition">
+                        <span class="font-bold text-gray-900 pr-4">觀塘、將軍澳居民方便來上課嗎？</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-emerald-600 flex-shrink-0" style="transform:rotate(0deg)"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-5" style="max-height:0;opacity:0">
+                        <p class="text-gray-600 leading-relaxed">非常適合！本會位於油塘，交通便捷，觀塘區、將軍澳及東九龍居民均可輕鬆到達。上課地點在小童群益會賽馬會油塘青少年綜合服務中心前空地，環境開揚舒適。</p>
+                        <a href="kwun-tong.html" class="inline-flex items-center text-emerald-700 hover:text-emerald-800 text-sm font-medium mt-2">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 養生專欄精選 -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">養生專欄精選</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">100篇太極健康知識文章，助你深入了解太極拳的益處</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="articles/tai-chi-beginner-guide.html" class="fade-in bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition group">
+                    <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-3">太極入門</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition">太極拳入門指南：初學者必讀的10個基本概念</h3>
+                    <p class="text-gray-600 text-sm mb-3">從零開始學習太極拳，了解基本步法、呼吸法、身型要求等核心概念。</p>
+                    <span class="text-emerald-700 text-sm font-medium inline-flex items-center">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
+                </a>
+                <a href="articles/tai-chi-neck-pain-relief.html" class="fade-in bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition group" style="transition-delay:0.1s">
+                    <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-3">肩頸腰背</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition">太極拳如何舒緩肩頸痛？辦公室人士的救星</h3>
+                    <p class="text-gray-600 text-sm mb-3">長期使用電腦導致肩頸僵硬疼痛？太極拳能有效舒緩肩頸痛。</p>
+                    <span class="text-emerald-700 text-sm font-medium inline-flex items-center">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
+                </a>
+                <a href="articles/tai-chi-fall-prevention.html" class="fade-in bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition group" style="transition-delay:0.2s">
+                    <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-3">長者健康</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition">太極拳預防長者跌倒：科學證實的有效方法</h3>
+                    <p class="text-gray-600 text-sm mb-3">跌倒是長者受傷的主要原因。太極拳能降低跌倒風險達45%。</p>
+                    <span class="text-emerald-700 text-sm font-medium inline-flex items-center">閱讀更多 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
+                </a>
+            </div>
+            <div class="text-center mt-10 fade-in">
+                <a href="blog.html" class="inline-flex items-center bg-emerald-700 text-white px-8 py-3 rounded-full hover:bg-emerald-800 transition font-bold">
+                    查看更多文章 <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -610,7 +719,7 @@
 
                 <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
                     <h3 class="text-xl font-bold text-white mb-4">查詢表格</h3>
-                    <form class="space-y-4" onsubmit="event.preventDefault();">
+                    <form id="contact-form" class="space-y-4">
                         <div>
                             <label class="block text-sm mb-1">姓名</label>
                             <input type="text" class="w-full bg-stone-800 border border-stone-700 rounded p-3 text-white focus:outline-none focus:border-emerald-500" placeholder="您的稱呼"/>
@@ -628,7 +737,7 @@
             </div>
             
             <div class="border-t border-stone-800 mt-12 pt-8 text-center text-sm text-stone-500">
-                &copy; 2024 林燦平太極學會. All Rights Reserved.
+                &copy; 2026 林燦平太極學會. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -646,12 +755,16 @@
         </span>
     </a>
 
-    <!-- JavaScript for Mobile Menu & Icons -->
+    <!-- 返回頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 bg-emerald-700 hover:bg-emerald-800 text-white p-3 rounded-full shadow-2xl transition transform hover:scale-110 z-50 opacity-0 pointer-events-none" aria-label="返回頂部">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script>
-        // 初始化 Icons
         lucide.createIcons();
 
-        // 手機版選單邏輯
+        // 手機版選單
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -664,7 +777,6 @@
             closeIcon.classList.toggle('hidden');
         });
 
-        // 點擊連結後自動關閉選單
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -672,6 +784,108 @@
                 closeIcon.classList.add('hidden');
             });
         });
+
+        // 返回頂部按鈕
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100');
+            }
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // 導航滾動高亮
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const observerNav = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.toggle('text-emerald-700', link.getAttribute('href') === '#' + id);
+                        link.classList.toggle('font-bold', link.getAttribute('href') === '#' + id);
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+        sections.forEach(s => observerNav.observe(s));
+
+        // 手風琴 FAQ
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const answer = item.querySelector('.faq-answer');
+                const icon = btn.querySelector('.faq-icon');
+                const isOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(fi => {
+                    fi.classList.remove('open');
+                    fi.querySelector('.faq-answer').style.maxHeight = '0';
+                    fi.querySelector('.faq-answer').style.opacity = '0';
+                    fi.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                });
+                // Open clicked (if was closed)
+                if (!isOpen) {
+                    item.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.opacity = '1';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // 動態時間表過濾
+        document.querySelectorAll('.schedule-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.schedule-filter').forEach(b => {
+                    b.classList.remove('bg-emerald-700', 'text-white');
+                    b.classList.add('bg-white', 'text-gray-700');
+                });
+                btn.classList.add('bg-emerald-700', 'text-white');
+                btn.classList.remove('bg-white', 'text-gray-700');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.schedule-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.period === filter) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        requestAnimationFrame(() => { card.style.opacity = '1'; });
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Intersection Observer - Fade-in on scroll
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+        // 頁尾表單 → WhatsApp
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = contactForm.querySelector('input[type="text"]').value.trim();
+                const phone = contactForm.querySelector('input[type="tel"]').value.trim();
+                if (!name || !phone) {
+                    alert('請填寫姓名和聯絡電話');
+                    return;
+                }
+                const msg = encodeURIComponent(`你好，林師傅！我是${name}（電話：${phone}）。我在網頁看到太極班招生，想查詢更多詳情。`);
+                window.open(`https://wa.me/85260985742?text=${msg}`, '_blank');
+            });
+        }
     </script>
 </body>
 </html>
