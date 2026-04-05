@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <script>
+    (function(){
+        var d=window.location.origin+window.location.pathname;
+        var b=window.location.origin;
+        var c=document.querySelector('link[rel="canonical"]');
+        if(c)c.href=d;
+        var og=document.querySelectorAll('meta[property="og:url"]');
+        og.forEach(function(m){m.content=d;});
+        var ogi=document.querySelectorAll('meta[property="og:image"]');
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        var twi=document.querySelectorAll('meta[name="twitter:image"]');
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        // Fix JSON-LD schemas
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+            try{
+                var j=JSON.parse(s.textContent);
+                var fix=function(o){
+                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
+                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    }
+                    if(Array.isArray(o))return o.map(fix);
+                    if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
+                    return o;
+                };
+                s.textContent=JSON.stringify(fix(j),null,0);
+            }catch(e){}
+        });
+    })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找不到頁面 | 林燦平太極學會</title>
+    <meta name="description" content="您尋找的頁面不存在。返回林燦平太極學會首頁，探索太極拳課程、養生專欄及報名資訊。">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-gray-800 bg-stone-50">
+    <!-- 導航欄 -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+            <a href="index.html" class="text-xl font-bold text-emerald-800 border-2 border-emerald-800 p-1 rounded">林師傅</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-700">首頁</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-700">養生專欄</a>
+                <a href="index.html#contact" class="bg-emerald-700 text-white px-4 py-2 rounded-full hover:bg-emerald-800 transition">致電查詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 內容 -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <i data-lucide="search-x" class="w-20 h-20 mx-auto text-emerald-300 mb-4"></i>
+                <h1 class="text-8xl font-bold text-emerald-800 mb-4">404</h1>
+                <p class="text-2xl text-gray-600 mb-2">找不到頁面</p>
+                <p class="text-gray-500 mb-8">您尋找的頁面可能已被移除或從未存在。</p>
+                <a href="index.html" class="inline-flex items-center bg-emerald-700 text-white px-8 py-3 rounded-full hover:bg-emerald-800 transition font-bold text-lg">
+                    <i data-lucide="home" class="mr-2 w-5 h-5"></i>
+                    返回首頁
+                </a>
+            </div>
+
+            <!-- 熱門文章 -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">熱門文章推薦</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="articles/tai-chi-beginner-guide.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">太極拳入門指南：初學者必讀的10個基本概念</h3>
+                        <p class="text-gray-600 text-sm">從零開始學習太極拳，了解基本步法、呼吸法、身型要求等核心概念。</p>
+                    </a>
+                    <a href="articles/tai-chi-neck-pain-relief.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">肩頸腰背</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">太極拳如何舒緩肩頸痛？辦公室人士的救星</h3>
+                        <p class="text-gray-600 text-sm">長期使用電腦導致肩頸僵硬疼痛？太極拳能有效舒緩肩頸痛。</p>
+                    </a>
+                    <a href="articles/tai-chi-fall-prevention.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">長者健康</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">太極拳預防長者跌倒：科學證實的有效方法</h3>
+                        <p class="text-gray-600 text-sm">跌倒是長者受傷的主要原因。太極拳能降低跌倒風險達45%。</p>
+                    </a>
+                    <a href="articles/tai-chi-stress-relief.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">心理健康</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">太極拳減壓科學：如何透過太極釋放都市壓力</h3>
+                        <p class="text-gray-600 text-sm">都市生活壓力大，太極拳被科學證實能有效降低皮質醇水平。</p>
+                    </a>
+                    <a href="articles/tai-chi-sword-basics.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">太極劍入門：初學者必知的基礎知識</h3>
+                        <p class="text-gray-600 text-sm">太極劍是太極拳的重要器械之一。本文介紹基本握法和初學要點。</p>
+                    </a>
+                    <a href="articles/qigong-beginners-guide.html" class="bg-white rounded-2xl shadow-sm p-6 hover:shadow-lg transition text-left">
+                        <span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">養生氣功</span>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">氣功入門：初學者必知的氣功基礎知識</h3>
+                        <p class="text-gray-600 text-sm">氣功是中國傳統的養生方法，通過調節呼吸、動作和意念來促進健康。</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <section class="py-8 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm mb-3">服務地區：</p>
+            <div class="flex flex-wrap gap-2 justify-center">
+                <a href="kwun-tong.html" class="text-emerald-700 hover:text-emerald-800 text-sm">觀塘</a>
+                <a href="lam-tin.html" class="text-emerald-700 hover:text-emerald-800 text-sm">藍田</a>
+                <a href="tseung-kwan-o.html" class="text-emerald-700 hover:text-emerald-800 text-sm">將軍澳</a>
+                <a href="kowloon-city.html" class="text-emerald-700 hover:text-emerald-800 text-sm">九龍城</a>
+                <a href="wong-tai-sin.html" class="text-emerald-700 hover:text-emerald-800 text-sm">黃大仙</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+        <p class="mt-2"><a href="index.html" class="text-emerald-400 hover:text-emerald-300">返回首頁</a></p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

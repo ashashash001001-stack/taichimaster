@@ -1,0 +1,229 @@
+#!/usr/bin/env python3
+"""Generate 5 region landing pages for Programmatic SEO."""
+import html, os
+
+BASE = "https://chungyuicheung.github.io/taichimaster/"
+
+regions = [
+    {
+        "slug": "kwun-tong",
+        "name": "觀塘",
+        "title": "觀塘太極班推薦 | 林燦平太極學會 - 油塘實體課程",
+        "desc": "觀塘區居民學太極首選！林燦平師傅於油塘教授太極拳，從觀塘出發僅需10分鐘。歡迎初學者，設有早班及晚班。",
+        "transport": "從觀塘前往油塘非常方便。乘坐港鐵觀塘線，由觀塘站乘坐1個站即可到達油塘站（約3分鐘）。出站後步行約5分鐘即可到達上課地點。另外，多條巴士路線（如14、14X、15、15A等）連接觀塘和油塘，車程約10-15分鐘。",
+        "faq_q": "從觀塘去油塘練太極方便嗎？",
+        "faq_a": "非常方便！觀塘和油塘相鄰，乘坐港鐵只需1個站（約3分鐘），巴士也只需10-15分鐘。許多觀塘區的學員每天都來上課，交通完全不是問題。"
+    },
+    {
+        "slug": "lam-tin",
+        "name": "藍田",
+        "title": "藍田太極班推薦 | 林燦平太極學會 - 鄰近油塘實體課程",
+        "desc": "藍田居民學太極好去處！林燦平師傅於油塘教授太極拳，從藍田出發僅需5分鐘。歡迎任何年齡及初學者參加。",
+        "transport": "藍田距離油塘非常近。乘坐港鐵觀塘線，由藍田站乘坐1個站即可到達油塘站（約2分鐘）。步行前往也只需約15-20分鐘。巴士路線214M、214S等也可直達油塘，車程約5-8分鐘。",
+        "faq_q": "藍田去油塘練太極遠不遠？",
+        "faq_a": "藍田和油塘是相鄰的地區，非常近！乘坐港鐵只需1個站（約2分鐘），步行也只需15-20分鐘。很多藍田區的長者學員都每天步行來上課，當作晨運的一部分。"
+    },
+    {
+        "slug": "tseung-kwan-o",
+        "name": "將軍澳",
+        "title": "將軍澳初學太極 | 林燦平太極學會 - 油塘實體課程",
+        "desc": "將軍澳居民學太極首選！林燦平師傅於油塘教授太極拳，從將軍澳出發約15分鐘。設有早班及晚班，歡迎初學者。",
+        "transport": "從將軍澳前往油塘交通便利。乘坐港鐵將軍澳線轉觀塘線，由將軍澳站或坑口站出發，經調景嶺轉車，約15分鐘即可到達油塘站。另外，巴士路線98A、98C、296M等也可到達油塘附近，車程約15-20分鐘。",
+        "faq_q": "將軍澳去油塘練太極方便嗎？",
+        "faq_a": "方便！從將軍澳乘坐港鐵約15分鐘即可到達油塘。很多將軍澳區的學員選擇下課後或週末來上課，交通時間短，非常適合。"
+    },
+    {
+        "slug": "kowloon-city",
+        "name": "九龍城",
+        "title": "九龍城太極班 | 林燦平太極學會 - 東九龍實體課程",
+        "desc": "九龍城居民學太極推薦！林燦平師傅於油塘教授太極拳，從九龍城出發約20分鐘。歡迎任何年齡人士參加。",
+        "transport": "從九龍城前往油塘有多種交通選擇。乘坐巴士（如11X、13X等）可直達油塘，車程約20-25分鐘。也可乘坐小巴或的士，經觀塘道前往，車程約15-20分鐘。港鐵方面，可從九龍城步行至九龍塘站，乘坐觀塘線直達油塘，約20分鐘。",
+        "faq_q": "九龍城去油塘練太極遠嗎？",
+        "faq_a": "不算遠。從九龍城乘坐巴士約20-25分鐘即可到達油塘。不少九龍城區的學員覺得這個交通時間完全可以接受，而且油塘的環境比市區更適合練習太極。"
+    },
+    {
+        "slug": "wong-tai-sin",
+        "name": "黃大仙",
+        "title": "黃大仙太極班 | 林燦平太極學會 - 東九龍實體課程",
+        "desc": "黃大仙居民學太極推薦！林燦平師傅於油塘教授太極拳，從黃大仙出發約25分鐘。歡迎初學者，可即場報名。",
+        "transport": "從黃大仙前往油塘可乘坐港鐵觀塘線直達。由黃大仙站乘坐觀塘線，經鑽石山、彩虹、九龍灣、觀塘，約20分鐘即可到達油塘站。出站後步行約5分鐘即達上課地點。巴士路線方面，也可考慮乘坐的士或小巴，經觀塘道前往。",
+        "faq_q": "黃大仙去油塘練太極方便嗎？",
+        "faq_a": "方便！乘坐港鐵觀塘線直達，約20分鐘。黃大仙站直達油塘站，不需要轉車。很多黃大仙區的長者學員都選擇乘坐港鐵來上課，方便快捷。"
+    }
+]
+
+def gen_page(r):
+    return f'''<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{html.escape(r["title"])}</title>
+    <meta name="description" content="{html.escape(r["desc"])}">
+    <meta name="keywords" content="{r["name"]}太極班, {r["name"]}太極, 油塘太極班, 東九龍太極, 太極拳班, 初學者太極">
+    <link rel="canonical" href="{BASE}{r["slug"]}.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{html.escape(r["title"])}">
+    <meta property="og:description" content="{html.escape(r["desc"])}">
+    <meta property="og:url" content="{BASE}{r["slug"]}.html">
+    <meta property="og:locale" content="zh_HK">
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "林燦平太極學會 - {r["name"]}區太極班",
+      "description": "林燦平師傅於油塘教授太極拳，服務{r["name"]}區居民。歡迎任何年齡及初學者參加。",
+      "url": "{BASE}{r["slug"]}.html",
+      "telephone": "+852-6098-5742",
+      "areaServed": {{
+        "@type": "City",
+        "name": "{r["name"]}"
+      }},
+      "address": {{
+        "@type": "PostalAddress",
+        "addressLocality": "油塘",
+        "addressRegion": "香港",
+        "addressCountry": "HK"
+      }}
+    }}
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>html {{ scroll-behavior: smooth; }}</style>
+</head>
+<body class="font-sans text-gray-800 bg-stone-50">
+    <!-- 導航欄 -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+            <a href="index.html" class="text-xl font-bold text-emerald-800 border-2 border-emerald-800 p-1 rounded">林師傅</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-700">首頁</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-700">養生專欄</a>
+                <a href="index.html#contact" class="bg-emerald-700 text-white px-4 py-2 rounded-full hover:bg-emerald-800 transition">致電查詢</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-20 pb-16 md:pt-32 md:pb-24 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-3 rounded bg-emerald-700/80 text-white text-sm mb-4">林燦平太極學會 主辦</span>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">{r["name"]}太極班推薦<br/><span class="text-emerald-400">油塘實體課程，歡迎初學者</span></h1>
+            <p class="text-lg text-emerald-200 mb-8 max-w-2xl mx-auto">林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。從{r["name"]}出發，交通便利，歡迎任何年齡人士參加。</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E4%BD%8F%E5%9C%A8{r["name"]}%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E7%8F%AD%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition flex items-center justify-center"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢</a>
+                <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded-lg transition flex items-center justify-center">了解課程詳情</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 為什麼選擇我們 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">為什麼{r["name"]}居民選擇林師傅？</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-stone-50 rounded-xl text-center">
+                    <div class="text-3xl mb-3">🚇</div>
+                    <h3 class="font-bold text-lg mb-2">交通便利</h3>
+                    <p class="text-gray-600 text-sm">從{r["name"]}前往油塘十分方便，港鐵/巴士直達，車程短。</p>
+                </div>
+                <div class="p-6 bg-stone-50 rounded-xl text-center">
+                    <div class="text-3xl mb-3">👨‍🏫</div>
+                    <h3 class="font-bold text-lg mb-2">師傅親自教授</h3>
+                    <p class="text-gray-600 text-sm">林燦平師傅30+年經驗，細心教導每一個動作。</p>
+                </div>
+                <div class="p-6 bg-stone-50 rounded-xl text-center">
+                    <div class="text-3xl mb-3">🌅</div>
+                    <h3 class="font-bold text-lg mb-2">早班晚班靈活選擇</h3>
+                    <p class="text-gray-600 text-sm">設有早班（9:00-13:00）及晚班（19:00-22:00），配合不同作息。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 交通指引 -->
+    <section class="py-16 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-6">從{r["name"]}前往上課地點</h2>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="bg-emerald-100 p-3 rounded-full"><i data-lucide="map-pin" class="w-6 h-6 text-emerald-700"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">上課地點：小童群益會前空地（油塘）</h3>
+                        <p class="text-gray-600 mt-1">環境開揚舒適，適合練習。</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="bg-emerald-100 p-3 rounded-full"><i data-lucide="train-front" class="w-6 h-6 text-emerald-700"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">港鐵路線</h3>
+                        <p class="text-gray-600 mt-1">{r["transport"].split("港鐵")[1].split("。")[0] if "港鐵" in r["transport"] else "乘坐港鐵觀塘線直達油塘站。"}</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="bg-emerald-100 p-3 rounded-full"><i data-lucide="bus" class="w-6 h-6 text-emerald-700"></i></div>
+                    <div>
+                        <h3 class="font-bold text-lg">巴士路線</h3>
+                        <p class="text-gray-600 mt-1">{r["transport"].split("巴士")[1] if "巴士" in r["transport"] else "多條巴士路線可達油塘。"}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常見問題 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">{r["name"]}區常見問題</h2>
+            <div class="space-y-4">
+                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                    <h3 class="font-bold text-gray-900 mb-2">❓ {r["faq_q"]}</h3>
+                    <p class="text-gray-600 ml-8">{r["faq_a"]}</p>
+                </div>
+                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                    <h3 class="font-bold text-gray-900 mb-2">❓ 太極拳適合什麼年齡的人學習？</h3>
+                    <p class="text-gray-600 ml-8">太極拳適合<strong>任何年齡</strong>人士學習。無論您是年輕人、中年人還是長者，初學者還是有經驗者，林燦平太極學會都有適合您的課程。</p>
+                </div>
+                <div class="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                    <h3 class="font-bold text-gray-900 mb-2">❓ 太極班教授什麼內容？</h3>
+                    <p class="text-gray-600 ml-8">本會教授<strong>太極拳、太極刀、太極劍、太極扇及鞭桿</strong>。由基本樁功步法開始，循序漸進學習傳統套路，適合初學者入門。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他地區 -->
+    <section class="py-12 bg-stone-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">其他地區太極班</h2>
+            <div class="flex flex-wrap gap-3 justify-center">
+                {" ".join([f'<a href="{rp["slug"]}.html" class="px-4 py-2 bg-white rounded-full border border-stone-200 text-gray-700 hover:border-emerald-500 hover:text-emerald-700 transition text-sm">{rp["name"]}太極班</a>' for rp in regions if rp["slug"] != r["slug"]])}
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-emerald-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">準備好開始您的太極之旅嗎？</h2>
+            <p class="text-emerald-200 mb-8">歡迎隨時親臨油塘觀課，滿意再報名！</p>
+            <a href="https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E4%BD%8F%E5%9C%A8{r["name"]}%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E7%8F%AD%E8%A9%B3%E6%83%85%E3%80%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-bold transition"><i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>WhatsApp 查詢報名</a>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-stone-900 text-stone-400 py-8 text-center">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+        <p class="mt-2"><a href="index.html" class="text-emerald-400 hover:text-emerald-300">返回首頁</a></p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>'''
+
+for r in regions:
+    with open(f'{r["slug"]}.html', 'w', encoding='utf-8') as f:
+        f.write(gen_page(r))
+    print(f'Created: {r["slug"]}.html ({r["name"]})')
+
+print(f'\nTotal: {len(regions)} region landing pages generated')
