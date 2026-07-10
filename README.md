@@ -226,11 +226,12 @@ taichimaster/
 │   ├── class_8year.JPG         # 器械班上課實況
 │   └── solo2.jpg               # 師傅示範器械
 │
-├── 生成工具 (3)
+├── 生成工具 (5)
 │   ├── generate_blog.py        # 100 篇文章 + blog.html 生成器
 │   ├── gen_regions.py          # 5 張地區登陸頁生成器
 │   ├── upgrade_content.py      # 內容結構升級工具
-│   └── fix_duplicates.py       # 消除重複內容工具
+│   ├── fix_duplicates.py       # 消除重複內容工具
+│   └── fix_meta_descriptions.py # 擴展 meta description 至 60-80 字
 │
 ├── .article_classification.json # Pillar/Cluster 分類配置
 ├── opencode.jsonc              # OpenCode 配置
@@ -346,6 +347,22 @@ python3 upgrade_content.py
 python3 fix_duplicates.py
 ```
 
+### fix_meta_descriptions.py
+
+將所有 100 篇文章的 meta description 擴展至 60-80 中文字元，確保每篇文章都有獨特、相關的描述。
+
+```bash
+python3 fix_meta_descriptions.py
+```
+
+---
+
+## 變現
+
+### Google AdSense
+
+網站已部署 `ads.txt` 檔案，支援 Google AdSense 廣告變現。
+
 ---
 
 ## SEO 檢查清單
@@ -353,7 +370,7 @@ python3 fix_duplicates.py
 ### 已完成 ✅
 
 - [x] Meta Title（含地區、服務、痛點，< 60 字元）
-- [x] Meta Description（含地點、服務、CTA）
+- [x] Meta Description（含地點、服務、CTA，60-80 中文字元）
 - [x] Meta Keywords（12 個關鍵字）
 - [x] Canonical URL（所有頁面）
 - [x] Open Graph 標籤（Facebook 分享）
