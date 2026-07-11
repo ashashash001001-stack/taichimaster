@@ -1,3 +1,27 @@
+# AI Search Engine Crawlers - Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Training-only crawlers - Blocked
+User-agent: CCBot
+Disallow: /
+
+# All other crawlers
 User-agent: *
 Allow: /
 
