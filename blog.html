@@ -32,12 +32,15 @@
     </script>
 
     <meta charset="UTF-8">
+    <!-- TODO: Replace with actual GSC verification code after domain verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>養生專欄 | 林燦平太極學會 - 太極拳健康知識庫</title>
     <meta name="description" content="林燦平太極學會養生專欄，涵蓋太極入門、肩頸腰背舒緩、長者健康、心理健康、器械教學、養生氣功、太極文化及學員真實故事。100篇專業文章助你了解太極拳的益處。">
     <meta name="keywords" content="太極拳, 養生, 健康, 氣功, 肩頸痛, 長者運動, 減壓, 太極劍, 太極扇, 油塘太極班">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/blog.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="養生專欄 | 林燦平太極學會">
@@ -241,6 +244,39 @@
 
     // Initial render
     renderArticles();
+    </script>
+    <!-- GA4 Custom Events -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track blog search
+        var searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            var searchTimer;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(function() {
+                    var query = searchInput.value.trim();
+                    if (query.length >= 3) {
+                        gtag('event', 'blog_search', {
+                            'event_category': 'engagement',
+                            'event_label': query.substring(0, 100),
+                            'search_term': query.substring(0, 100)
+                        });
+                    }
+                }, 1000);
+            });
+        }
+
+        // Track category filter clicks
+        document.querySelectorAll('.cat-btn').forEach(function(el) {
+            el.addEventListener('click', function() {
+                gtag('event', 'blog_category_filter', {
+                    'event_category': 'engagement',
+                    'event_label': this.textContent.trim()
+                });
+            });
+        });
+    });
     </script>
 </body>
 </html>

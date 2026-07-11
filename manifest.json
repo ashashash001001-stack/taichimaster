@@ -1,0 +1,35 @@
+{
+  "name": "林燦平太極學會",
+  "short_name": "林師傅太極",
+  "description": "油塘太極班招生，林燦平師傅親自教授太極拳、刀、劍、扇、鞭桿",
+  "start_url": "/taichimaster/",
+  "scope": "/taichimaster/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#065f46",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/taichimaster/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/taichimaster/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/taichimaster/class.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/taichimaster/class.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
