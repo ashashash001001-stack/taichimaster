@@ -1,0 +1,136 @@
+# 林燦平太極學會 | Lam Chan Ping Tai Chi Club
+> 油塘太極班招生 | 教授太極拳、刀、劍、扇、鞭桿 | 歡迎任何年齡及初學者
+
+## 核心頁面
+- https://chungyuicheung.github.io/taichimaster/：首頁，包含課程介紹、收費、時間表、學員見證、常見問題
+- https://chungyuicheung.github.io/taichimaster/blog.html：養生專欄，100 篇太極健康知識文章
+- https://chungyuicheung.github.io/taichimaster/404.html：自訂錯誤頁，包含熱門文章推薦
+
+## 地區登陸頁
+- https://chungyuicheung.github.io/taichimaster/kwun-tong.html：觀塘太極班資訊
+- https://chungyuicheung.github.io/taichimaster/lam-tin.html：藍田太極班資訊
+- https://chungyuicheung.github.io/taichimaster/tseung-kwan-o.html：將軍澳太極班資訊
+- https://chungyuicheung.github.io/taichimaster/kowloon-city.html：九龍城太極班資訊
+- https://chungyuicheung.github.io/taichimaster/wong-tai-sin.html：黃大仙太極班資訊
+
+## 文章分類
+
+### 太極入門（13 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-beginner-guide.html：太極拳入門指南，初學者必讀的 10 個基本概念
+- https://chungyuicheung.github.io/taichimaster/articles/yang-style-tai-chi-introduction.html：楊氏太極拳介紹，最流行的太極流派
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-vs-qigong-difference.html：太極拳與氣功的分別
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-equipment-needed.html：學太極需要買什麼裝備？初學者裝備指南
+- https://chungyuicheung.github.io/taichimaster/articles/best-time-practice-tai-chi.html：什麼時候練太極最好？晨練 vs 晚練
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-breathing-techniques.html：太極拳呼吸法教學，腹式呼吸的正確方法
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-24-forms-overview.html：二十四式簡化太極拳，每一式詳細解說
+- https://chungyuicheung.github.io/taichimaster/articles/common-tai-chi-mistakes.html：初學太極常見的 8 個錯誤及改正方法
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-terminology-guide.html：太極拳常用術語解釋
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-etiquette.html：太極拳課堂禮儀與傳統
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-age-guide.html：不同年齡學太極的注意事項
+- https://chungyuicheung.github.io/taichimaster/articles/how-to-choose-tai-chi-class.html：如何選擇適合自己的太極班
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-morning-routine.html：清晨太極養生習慣養成指南
+
+### 肩頸腰背（13 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-neck-pain-relief.html：太極拳如何舒緩肩頸痛？辦公室人士救星
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-lower-back-pain.html：太極拳改善腰背痛，科學實證方法
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-digital-neck.html：低頭族救星，太極拳改善數位頸
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-frozen-shoulder.html：太極拳幫助改善五十肩
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-carpal-tunnel.html：太極拳對腕管綜合症的幫助
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-knee-pain.html：太極拳與膝蓋健康，正確練習避免受傷
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sciatica.html：太極拳改善坐骨神經痛
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-headache-relief.html：太極拳緩解緊張性頭痛
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-muscle-tension.html：太極拳釋放全身肌肉緊繃
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-posture-correction.html：太極拳矯正不良姿勢
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sports-injury.html：太極拳幫助運動傷害康復
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-fibromyalgia.html：太極拳對纖維肌痛的緩解作用
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-arthritis.html：太極拳改善關節炎的科學依據
+
+### 長者健康（13 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-fall-prevention.html：太極拳預防長者跌倒，科學證實有效方法
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-balance.html：太極拳改善長者平衡能力
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-flexibility.html：太極拳提升長者柔韌性
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-heart.html：太極拳對長者心血管健康的好處
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-immunity.html：太極拳增強長者免疫力
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-memory.html：太極拳改善長者記憶力
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-sleep.html：太極拳改善長者睡眠品質
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-osteoporosis.html：太極拳預防骨質疏鬆
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-diabetes.html：太極拳對長者糖尿病的輔助治療
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-depression.html：太極拳改善長者抑鬱情緒
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-social.html：太極拳豐富長者社交生活
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-cane-elderly.html：長者用太極拐杖的好處
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-retirement-life.html：退休後學太極，開啟健康第二人生
+
+### 心理健康（12 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-stress-relief.html：太極拳減壓科學，如何釋放都市壓力
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-anxiety.html：太極拳緩解焦慮症
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-depression.html：太極拳改善抑鬱症
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sleep-quality.html：太極拳提升睡眠品質
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-meditation.html：太極拳與靜坐冥想
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-mindfulness.html：太極拳與正念練習
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-emotional-balance.html：太極拳調節情緒平衡
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-brain-health.html：太極拳促進大腦健康
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-focus.html：太極拳提升專注力
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-confidence.html：太極拳建立自信心
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-burnout.html：太極拳對抗工作倦怠
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-patience.html：從太極拳學習耐心
+
+### 器械教學（13 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sword-basics.html：太極劍入門，初學者必知基礎知識
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sword-forms.html：太極劍基本套路教學
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-sword-health.html：太極劍的健康益處
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-broadsword.html：太極刀入門教學
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-fan-techniques.html：太極扇基本技法
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-fan-health-benefits.html：太極扇的健康益處
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-fan-performance.html：太極扇表演技巧
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-cane.html：太極拐杖用法教學
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-weapons-comparison.html：太極器械比較，刀劍扇鞭桿特點
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-weapons-history.html：太極器械的歷史淵源
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-equipment-selection.html：如何選擇太極器械
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-equipment-maintenance.html：太極器械保養指南
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-martial-arts.html：太極拳的武術應用
+
+### 養生氣功（12 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-beginners-guide.html：氣功入門，初學者必知基礎知識
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-breathing.html：氣功呼吸法教學
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-meditation.html：氣功冥想入門
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-energy.html：氣功與能量養生
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-immunity.html：氣功增強免疫力
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-digestion.html：氣功改善腸胃消化
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-meridians.html：氣功與經絡養生
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-five-animals.html：五禽戲入門教學
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-morning-routine.html：清晨氣功養生流程
+- https://chungyuicheung.github.io/taichimaster/articles/qigong-vs-yoga.html：氣功與瑜伽的分別
+- https://chungyuicheung.github.io/taichimaster/articles/baduanjin-eight-brocades.html：八段錦完整教學
+- https://chungyuicheung.github.io/taichimaster/articles/zhan-zhuang-standing-meditation.html：站樁功入門指南
+
+### 太極文化（12 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-history-origin.html：太極拳的歷史起源
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-yin-yang-philosophy.html：太極拳與陰陽哲學
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-taoism.html：太極拳與道家思想
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-five-elements.html：太極拳與五行學說
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-chinese-medicine.html：太極拳與中醫養生理論
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-modern-science.html：太極拳的現代科學研究
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-global-spread.html：太極拳的全球傳播
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-hong-kong.html：香港太極拳發展史
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-famous-masters.html：太極拳著名大師介紹
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-unesco.html：太極拳入選聯合國非物質文化遺產
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-meditation-zen.html：太極拳與禪修
+- https://chungyuicheung.github.io/taichimaster/articles/tai-chi-senior-health-complete-guide.html：長者太極拳完全指南
+
+### 學員故事（12 篇）
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-stress-relief.html：金融業黃先生透過太極拳減壓
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-anxiety.html：廣告業陳小姐透過太極拳改善焦慮
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-beginner-60.html：62 歲退休教師重拾生活重心
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-chronic-pain.html：慢性腰痛患者的康復之路
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-community.html：太極班社區溫暖故事
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-family.html：一家四口一起練習太極
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-it-professional.html：IT 工程師改善肩頸痛
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-office-worker.html：寫字樓員工改善腰背痛
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-retiree.html：65 歲退休人士找到生活目標
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-senior-balance.html：78 歲婆婆預防跌倒
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-transformation.html：50 歲企業高管的健康轉變
+- https://chungyuicheung.github.io/taichimaster/articles/student-story-weight-loss.html：太極拳減重成功案例
+
+## 收費資訊
+收費請致電或 WhatsApp 6098 5742 查詢。歡迎即場試堂，滿意才報名。
+按月收費，設有太極拳班及器械班。
