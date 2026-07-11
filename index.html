@@ -1043,5 +1043,67 @@
             });
         }
     </script>
+    <!-- GA4 Custom Events -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track phone CTA clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                gtag('event', 'phone_click', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname
+                });
+            });
+        });
+
+        // Track WhatsApp clicks
+        document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'engagement',
+                    'event_label': window.location.pathname
+                });
+            });
+        });
+
+        // Track FAQ toggle
+        document.querySelectorAll('.faq-toggle').forEach(function(el) {
+            el.addEventListener('click', function() {
+                var question = this.querySelector('span') ? this.querySelector('span').textContent.trim().substring(0, 50) : 'unknown';
+                gtag('event', 'faq_toggle', {
+                    'event_category': 'engagement',
+                    'event_label': question
+                });
+            });
+        });
+
+        // Track schedule filter clicks
+        document.querySelectorAll('.schedule-filter').forEach(function(el) {
+            el.addEventListener('click', function() {
+                gtag('event', 'schedule_filter', {
+                    'event_category': 'engagement',
+                    'event_label': this.textContent.trim()
+                });
+            });
+        });
+
+        // Track scroll depth at 25%, 50%, 75%, 100%
+        var scrollDepths = [25, 50, 75, 100];
+        var trackedDepths = {};
+        window.addEventListener('scroll', function() {
+            var scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+            scrollDepths.forEach(function(depth) {
+                if (scrollPercent >= depth && !trackedDepths[depth]) {
+                    trackedDepths[depth] = true;
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': depth + '%',
+                        'value': depth
+                    });
+                }
+            });
+        }, { passive: true });
+    });
+    </script>
 </body>
 </html>

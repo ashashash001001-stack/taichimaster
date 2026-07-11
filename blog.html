@@ -244,5 +244,38 @@
     // Initial render
     renderArticles();
     </script>
+    <!-- GA4 Custom Events -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track blog search
+        var searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            var searchTimer;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(function() {
+                    var query = searchInput.value.trim();
+                    if (query.length >= 3) {
+                        gtag('event', 'blog_search', {
+                            'event_category': 'engagement',
+                            'event_label': query.substring(0, 100),
+                            'search_term': query.substring(0, 100)
+                        });
+                    }
+                }, 1000);
+            });
+        }
+
+        // Track category filter clicks
+        document.querySelectorAll('.cat-btn').forEach(function(el) {
+            el.addEventListener('click', function() {
+                gtag('event', 'blog_category_filter', {
+                    'event_category': 'engagement',
+                    'event_label': this.textContent.trim()
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>
