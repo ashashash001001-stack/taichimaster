@@ -1,12 +1,12 @@
 const CACHE_NAME = 'taichi-v1';
 const STATIC_ASSETS = [
-  '/taichimaster/',
-  '/taichimaster/index.html',
-  '/taichimaster/blog.html',
-  '/taichimaster/404.html',
-  '/taichimaster/favicon.png',
-  '/taichimaster/apple-touch-icon.png',
-  '/taichimaster/manifest.json'
+  '/',
+  '/index.html',
+  '/blog.html',
+  '/404.html',
+  '/favicon.png',
+  '/apple-touch-icon.png',
+  '/manifest.json'
 ];
 
 // Install: cache core assets
@@ -43,8 +43,8 @@ self.addEventListener('fetch', (event) => {
   // Static assets: cache-first
   if (
     url.pathname.match(/\.(html|css|js|png|jpg|jpeg|webp|svg|ico|json)$/) ||
-    url.pathname === '/taichimaster/' ||
-    url.pathname === '/taichimaster'
+    url.pathname === '/' ||
+    url.pathname === ''
   ) {
     event.respondWith(
       caches.match(event.request).then((cached) => {
@@ -55,8 +55,8 @@ self.addEventListener('fetch', (event) => {
           });
         }).catch(() => {
           // Offline fallback for HTML pages
-          if (url.pathname.match(/\.html$/) || url.pathname === '/taichimaster/' || url.pathname === '/taichimaster') {
-            return caches.match('/taichimaster/404.html');
+          if (url.pathname.match(/\.html$/) || url.pathname === '/' || url.pathname === '') {
+            return caches.match('/404.html');
           }
           return new Response('Offline', { status: 503 });
         });

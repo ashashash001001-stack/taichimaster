@@ -25,4 +25,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://chungyuicheung.github.io/taichimaster/sitemap.xml
+Sitemap: https://lamtaichi.pages.dev/sitemap.xml
