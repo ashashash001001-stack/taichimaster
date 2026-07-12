@@ -12,16 +12,16 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
-                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
-                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -42,24 +42,24 @@
     <meta name="keywords" content="油塘太極班, 觀塘區太極, 將軍澳太極, 太極拳班, 太極劍班, 太極扇教學, 鞭桿課程, 初學者運動班, 退休人士興趣班, 養生氣功, 東九龍武術班, 楊氏太極拳">
     <meta name="author" content="林燦平太極學會">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/">
     <meta property="og:title" content="林燦平太極學會 | 油塘太極班招生 | 歡迎初學者">
     <meta property="og:description" content="林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。油塘區實體課程，歡迎任何年齡人士參加。">
-    <meta property="og:image" content="https://chungyuicheung.github.io/taichimaster/class.png">
+    <meta property="og:image" content="https://lamtaichi.pages.dev/class.png">
     <meta property="og:locale" content="zh_HK">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="林燦平太極學會 | 油塘太極班招生">
     <meta name="twitter:description" content="林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。油塘區實體課程，歡迎任何年齡人士參加。">
-    <meta name="twitter:image" content="https://chungyuicheung.github.io/taichimaster/class.png">
+    <meta name="twitter:image" content="https://lamtaichi.pages.dev/class.png">
 
     <!-- LocalBusiness Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
@@ -68,7 +68,7 @@
       "@type": "SportsActivityLocation",
       "name": "林燦平太極學會 - 油塘太極班",
       "description": "林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。歡迎任何年齡及初學者參加。",
-      "url": "https://chungyuicheung.github.io/taichimaster/",
+      "url": "https://lamtaichi.pages.dev/",
       "telephone": "+852-6098-5742",
       "address": {
         "@type": "PostalAddress",
@@ -107,7 +107,7 @@
       "priceRange": "$$",
       "currenciesAccepted": "HKD",
       "paymentAccepted": "Cash",
-      "image": "https://chungyuicheung.github.io/taichimaster/class.png",
+      "image": "https://lamtaichi.pages.dev/class.png",
       "sameAs": []
     }
     </script>
@@ -118,8 +118,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "林燦平太極學會",
-      "url": "https://chungyuicheung.github.io/taichimaster/",
-      "logo": "https://chungyuicheung.github.io/taichimaster/favicon.png",
+      "url": "https://lamtaichi.pages.dev/",
+      "logo": "https://lamtaichi.pages.dev/favicon.png",
       "description": "林燦平師傅親自教授太極拳、刀、劍、扇及鞭桿。油塘區實體課程，歡迎任何年齡人士參加。",
       "foundingDate": "2020",
       "telephone": "+852-6098-5742",
@@ -154,7 +154,7 @@
           "position": 1,
           "name": "親臨觀課",
           "text": "於上課時間到油塘小童群益會前空地，親身體驗課堂氣氛，無需預約，零基礎亦可旁聽。",
-          "url": "https://chungyuicheung.github.io/taichimaster/#schedule"
+          "url": "https://lamtaichi.pages.dev/#schedule"
         },
         {
           "@type": "HowToStep",
@@ -168,7 +168,7 @@
           "position": 3,
           "name": "按時上課",
           "text": "報名後按時間表上課，每週一、三、五、六、日早上9-1時及晚上7-10時，二、四早上10-1時及晚上7-10時。",
-          "url": "https://chungyuicheung.github.io/taichimaster/#schedule"
+          "url": "https://lamtaichi.pages.dev/#schedule"
         }
       ]
     }

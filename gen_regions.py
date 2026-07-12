@@ -2,7 +2,7 @@
 """Generate 5 region landing pages for Programmatic SEO."""
 import html, os
 
-BASE = "https://chungyuicheung.github.io/taichimaster/"
+BASE = "https://lamtaichi.pages.dev/"
 
 regions = [
     {

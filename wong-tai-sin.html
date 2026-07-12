@@ -12,16 +12,16 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
-                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
-                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -40,11 +40,11 @@
     <title>黃大仙太極班 | 林燦平太極學會 - 東九龍實體課程</title>
     <meta name="description" content="黃大仙居民學太極推薦！林燦平師傅於油塘教授太極拳，從黃大仙出發約25分鐘。歡迎初學者，可即場報名。">
     <meta name="keywords" content="黃大仙太極班, 黃大仙太極, 油塘太極班, 東九龍太極, 太極拳班, 初學者太極">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/wong-tai-sin.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/wong-tai-sin.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="黃大仙太極班 | 林燦平太極學會 - 東九龍實體課程">
     <meta property="og:description" content="黃大仙居民學太極推薦！林燦平師傅於油塘教授太極拳，從黃大仙出發約25分鐘。歡迎初學者，可即場報名。">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/wong-tai-sin.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/wong-tai-sin.html">
     <meta property="og:locale" content="zh_HK">
 <script type="application/ld+json">
     {
@@ -52,9 +52,9 @@
       "@type": "SportsActivityLocation",
       "name": "林燦平太極學會 - 黃大仙區太極班",
       "description": "林燦平師傅於油塘教授太極拳，服務黃大仙區居民。歡迎任何年齡及初學者參加。",
-      "url": "https://chungyuicheung.github.io/taichimaster/wong-tai-sin.html",
+      "url": "https://lamtaichi.pages.dev/wong-tai-sin.html",
       "telephone": "+852-6098-5742",
-      "image": "https://chungyuicheung.github.io/taichimaster/class.png",
+      "image": "https://lamtaichi.pages.dev/class.png",
       "priceRange": "$$",
       "areaServed": {
         "@type": "City",

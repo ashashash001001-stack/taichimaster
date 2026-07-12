@@ -2,7 +2,7 @@
 
 > 油塘太極班招生 | 教授太極拳、刀、劍、扇、鞭桿 | 歡迎任何年齡及初學者
 
-**Live Site**: https://chungyuicheung.github.io/taichimaster/
+**Live Site**: https://lamtaichi.pages.dev/
 
 ---
 
@@ -249,7 +249,7 @@ taichimaster/
 | **Lucide Icons (CDN)** | 矢量圖標 |
 | **Vanilla JavaScript** | 手機選單、手風琴 FAQ、時間表過濾、Intersection Observer 動畫、滾動高亮、返回頂部、分享按鈕、動態 URL 替換 |
 | **Python 3** | 內容生成工具 |
-| **GitHub Pages** | 靜態網站託管 |
+| **Cloudflare Pages** | 靜態網站託管 |
 
 ### 前端互動功能
 
@@ -271,12 +271,12 @@ taichimaster/
 
 ## 部署方式
 
-### GitHub Pages（目前）
+### Cloudflare Pages（目前）
 
-網站已部署至 GitHub Pages，自動從 `main` 分支部署：
+網站已部署至 Cloudflare Pages，自動從 `main` 分支部署：
 
 ```
-https://chungyuicheung.github.io/taichimaster/
+https://lamtaichi.pages.dev/
 ```
 
 ### 自訂域名
