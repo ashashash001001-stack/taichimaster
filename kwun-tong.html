@@ -12,16 +12,16 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         // Fix JSON-LD schemas
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
-                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
-                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -40,11 +40,11 @@
     <title>觀塘太極班推薦 | 林燦平太極學會 - 油塘實體課程</title>
     <meta name="description" content="觀塘區居民學太極首選！林燦平師傅於油塘教授太極拳，從觀塘出發僅需10分鐘。歡迎初學者，設有早班及晚班。">
     <meta name="keywords" content="觀塘太極班, 觀塘太極, 油塘太極班, 東九龍太極, 太極拳班, 初學者太極">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/kwun-tong.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/kwun-tong.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="觀塘太極班推薦 | 林燦平太極學會 - 油塘實體課程">
     <meta property="og:description" content="觀塘區居民學太極首選！林燦平師傅於油塘教授太極拳，從觀塘出發僅需10分鐘。歡迎初學者，設有早班及晚班。">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/kwun-tong.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/kwun-tong.html">
     <meta property="og:locale" content="zh_HK">
 <script type="application/ld+json">
     {
@@ -52,9 +52,9 @@
       "@type": "SportsActivityLocation",
       "name": "林燦平太極學會 - 觀塘區太極班",
       "description": "林燦平師傅於油塘教授太極拳，服務觀塘區居民。歡迎任何年齡及初學者參加。",
-      "url": "https://chungyuicheung.github.io/taichimaster/kwun-tong.html",
+      "url": "https://lamtaichi.pages.dev/kwun-tong.html",
       "telephone": "+852-6098-5742",
-      "image": "https://chungyuicheung.github.io/taichimaster/class.png",
+      "image": "https://lamtaichi.pages.dev/class.png",
       "priceRange": "$$",
       "areaServed": {
         "@type": "City",

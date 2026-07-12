@@ -778,11 +778,11 @@ def generate_article_html(article):
     <title>{html.escape(article["title"])} | 林燦平太極學會養生專欄</title>
     <meta name="description" content="{html.escape(article["summary"])}">
     <meta name="keywords" content="{", ".join(article["tags"])}">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/articles/{article["slug"]}.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{html.escape(article["title"])}">
     <meta property="og:description" content="{html.escape(article["summary"])}">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/articles/{article["slug"]}.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:locale" content="zh_HK">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -855,11 +855,11 @@ blog_html = f'''<!DOCTYPE html>
     <title>養生專欄 | 林燦平太極學會 - 太極拳健康知識庫</title>
     <meta name="description" content="林燦平太極學會養生專欄，涵蓋太極入門、肩頸腰背舒緩、長者健康、心理健康、器械教學、養生氣功、太極文化及學員真實故事。100篇專業文章助你了解太極拳的益處。">
     <meta name="keywords" content="太極拳, 養生, 健康, 氣功, 肩頸痛, 長者運動, 減壓, 太極劍, 太極扇, 油塘太極班">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/blog.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/blog.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="養生專欄 | 林燦平太極學會">
     <meta property="og:description" content="100篇太極拳健康知識文章，涵蓋入門教學、痛症舒緩、長者健康、心理健康等主題。">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/blog.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/blog.html">
     <meta property="og:locale" content="zh_HK">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>

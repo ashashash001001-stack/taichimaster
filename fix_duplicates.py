@@ -757,8 +757,8 @@ def generate_article_html(article, content_html):
         cards = ''.join([f'<a href="{r["slug"]}.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">{html.escape(r["category"])}</span><h4 class="text-sm font-bold text-gray-900">{html.escape(r["title"])}</h4></a>' for r in related])
         related_html = f'<div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4">{cards}</div></div>'
     
-    article_schema = json.dumps({"@context":"https://schema.org","@type":"Article","headline":article["title"],"author":{"@type":"Organization","name":"林燦平太極學會"},"publisher":{"@type":"Organization","name":"林燦平太極學會"},"datePublished":"2025-01-01","dateModified":"2026-04-04","mainEntityOfPage":f"https://chungyuicheung.github.io/taichimaster/articles/{article['slug']}.html","inLanguage":"zh-HK"}, ensure_ascii=False)
-    breadcrumb_schema = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://chungyuicheung.github.io/taichimaster/"},{"@type":"ListItem","position":2,"name":"養生專欄","item":"https://chungyuicheung.github.io/taichimaster/blog.html"},{"@type":"ListItem","position":3,"name":article["category"],"item":"https://chungyuicheung.github.io/taichimaster/blog.html"},{"@type":"ListItem","position":4,"name":article["title"],"item":f"https://chungyuicheung.github.io/taichimaster/articles/{article['slug']}.html"}]}, ensure_ascii=False)
+    article_schema = json.dumps({"@context":"https://schema.org","@type":"Article","headline":article["title"],"author":{"@type":"Organization","name":"林燦平太極學會"},"publisher":{"@type":"Organization","name":"林燦平太極學會"},"datePublished":"2025-01-01","dateModified":"2026-04-04","mainEntityOfPage":f"https://lamtaichi.pages.dev/articles/{article['slug']}.html","inLanguage":"zh-HK"}, ensure_ascii=False)
+    breadcrumb_schema = json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://lamtaichi.pages.dev/"},{"@type":"ListItem","position":2,"name":"養生專欄","item":"https://lamtaichi.pages.dev/blog.html"},{"@type":"ListItem","position":3,"name":article["category"],"item":"https://lamtaichi.pages.dev/blog.html"},{"@type":"ListItem","position":4,"name":article["title"],"item":f"https://lamtaichi.pages.dev/articles/{article['slug']}.html"}]}, ensure_ascii=False)
     
     is_pillar = article['slug'] in pillar_slugs
     
@@ -774,15 +774,15 @@ def generate_article_html(article, content_html):
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){{m.content=d;}});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";}});
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){{if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";}});
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
             try{{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){{
-                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){{
-                        return o.replace(/https:\\/\\/chungyuicheung\\.github\\.io\\/taichimaster/g,b);
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){{
+                        return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
                     }}
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){{Object.keys(o).forEach(function(k){{o[k]=fix(o[k]);}});}}
@@ -800,11 +800,11 @@ def generate_article_html(article, content_html):
     <meta name="keywords" content="{", ".join(article["tags"])}">
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/articles/{article["slug"]}.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{html.escape(article["title"])}">
     <meta property="og:description" content="{html.escape(article["summary"])}">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/articles/{article["slug"]}.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:locale" content="zh_HK">
     <meta name="robots" content="index, follow">
     <script type="application/ld+json">{article_schema}</script>

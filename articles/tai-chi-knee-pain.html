@@ -10,15 +10,15 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("chungyuicheung")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
-                    if(typeof o==="string"&&o.indexOf("chungyuicheung")>-1){
-                        return o.replace(/https:\/\/chungyuicheung\.github\.io\/taichimaster/g,b);
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -36,15 +36,15 @@
     <meta name="keywords" content="膝蓋, 關節痛, 太極拳, 保護, 正確練法">
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="canonical" href="https://chungyuicheung.github.io/taichimaster/articles/tai-chi-knee-pain.html">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/articles/tai-chi-knee-pain.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="膝關節痛可以練太極嗎？正確練法保護膝蓋">
     <meta property="og:description" content="膝關節痛人士經常擔心練太極會加重膝蓋負擔。其實正確的太極練法反而能保護膝蓋。">
-    <meta property="og:url" content="https://chungyuicheung.github.io/taichimaster/articles/tai-chi-knee-pain.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/articles/tai-chi-knee-pain.html">
     <meta property="og:locale" content="zh_HK">
     <meta name="robots" content="index, follow">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "膝關節痛可以練太極嗎？正確練法保護膝蓋", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-knee-pain.html", "inLanguage": "zh-HK"}</script>
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://chungyuicheung.github.io/taichimaster/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 3, "name": "肩頸腰背", "item": "https://chungyuicheung.github.io/taichimaster/blog.html"}, {"@type": "ListItem", "position": 4, "name": "膝關節痛可以練太極嗎？正確練法保護膝蓋", "item": "https://chungyuicheung.github.io/taichimaster/articles/tai-chi-knee-pain.html"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "膝關節痛可以練太極嗎？正確練法保護膝蓋", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/tai-chi-knee-pain.html", "inLanguage": "zh-HK"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 3, "name": "肩頸腰背", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 4, "name": "膝關節痛可以練太極嗎？正確練法保護膝蓋", "item": "https://lamtaichi.pages.dev/articles/tai-chi-knee-pain.html"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script src="https://cdn.tailwindcss.com"></script>
