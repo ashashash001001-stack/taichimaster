@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script>
     (function(){
         var d=window.location.origin+window.location.pathname;
@@ -12,15 +10,15 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
                     if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
-return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -36,19 +34,28 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
     <title>二十四式簡化太極拳：每一式的詳細解說 | 林燦平太極學會養生專欄</title>
     <meta name="description" content="二十四式簡化太極拳是最受歡迎的入門套路。本文逐一解說每一式。">
     <meta name="keywords" content="二十四式, 太極拳, 套路, 教學, 初學者">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="canonical" href="https://lamtaichi.pages.dev/articles/tai-chi-24-forms-overview.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="二十四式簡化太極拳：每一式的詳細解說">
     <meta property="og:description" content="二十四式簡化太極拳是最受歡迎的入門套路。本文逐一解說每一式。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/tai-chi-24-forms-overview.html">
     <meta property="og:locale" content="zh_HK">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "二十四式簡化太極拳：每一式的詳細解說", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/tai-chi-24-forms-overview.html", "inLanguage": "zh-HK"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 3, "name": "太極入門", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 4, "name": "二十四式簡化太極拳：每一式的詳細解說", "item": "https://lamtaichi.pages.dev/articles/tai-chi-24-forms-overview.html"}]}</script>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -58,14 +65,37 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
     </nav>
-    <article class="max-w-4xl mx-auto px-4 pt-24 pb-20">
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">二十四式簡化太極拳：每一式的詳細解說...</li>
+        </ol>
+    </nav>
+    <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">太極入門</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">二十四式簡化太極拳：每一式的詳細解說</h1>
             <p class="text-gray-600 text-lg leading-relaxed">二十四式簡化太極拳是最受歡迎的入門套路。本文逐一解說每一式。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="二十四式">二十四式</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="套路">套路</span><span class="tag-chip" data-tag="教學">教學</span><span class="tag-chip" data-tag="初學者">初學者</span></div>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="二十四式">二十四式</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="套路">套路</span><span class="tag-chip" data-tag="教學">教學</span><span class="tag-chip" data-tag="初學者">初學者</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+        <span class="text-sm text-gray-500">分享：</span>
+        <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
+        <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
+        <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
+    </div></div>
         </header>
-        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">二十四式簡化太極拳是1956年由中國國家體育委員會編訂的，目的是讓更多人能夠學習太極拳。它從傳統楊氏太極拳中精選了24個代表性動作，去除了重複部分。</p><p class="text-gray-700 leading-relaxed mb-4">全套二十四式大約需要5-8分鐘完成，適合初學者學習。</p><p class="text-gray-700 leading-relaxed mb-4">第一組（起勢、左右野馬分鬃、白鶴亮翅）：建立基本站姿和重心轉移的感覺。</p><p class="text-gray-700 leading-relaxed mb-4">第二組（左右摟膝拗步、手揮琵琶、左右倒卷肱）：訓練手腳協調和後退步法。</p><p class="text-gray-700 leading-relaxed mb-4">第三組（左攬雀尾、右攬雀尾、單鞭）：太極拳的核心動作，包含掤、捋、擠、按四種基本手法。</p><p class="text-gray-700 leading-relaxed mb-4">第四組（雲手、單鞭、高探馬）：訓練腰部旋轉和平衡能力。</p><p class="text-gray-700 leading-relaxed mb-4">第五組（右蹬腳、雙峰貫耳、轉身左蹬腳）：加入腿部動作，增強下肢力量。</p><p class="text-gray-700 leading-relaxed mb-4">第六組（左下勢獨立、右下勢獨立）：訓練柔韌性和單腿平衡。</p><p class="text-gray-700 leading-relaxed mb-4">第七組（左右穿梭、海底針、閃通臂）：多角度訓練身體協調。</p><p class="text-gray-700 leading-relaxed mb-4">第八組（轉身搬攔捶、如封似閉、十字手、收勢）：結束動作，回歸平靜。</p><p class="text-gray-700 leading-relaxed mb-4">在林燦平太極學會，師傅會逐式教導，確保每個動作都正確到位。</p></div>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">二十四式簡化太極拳是1956年由中國國家體育委員會編訂的，目的是讓更多人能夠學習太極拳。它從傳統楊氏太極拳中精選了24個代表性動作，去除了重複部分。</p><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">二十四式的由來</h2><p class="text-gray-700 leading-relaxed mb-4">1956年由中國國家體育委員會編訂，從傳統楊氏太極拳中精選了24個代表性動作，去除了重複部分，使整套套路更加精練。</p><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">八組動作詳解</h2><p class="text-gray-700 leading-relaxed mb-4">第一組建立基本站姿，第二組訓練手腳協調，第三組是核心動作攬雀尾，第四組訓練腰部旋轉，第五組加入腿部動作，第六組訓練柔韌性，第七組多角度協調，第八組結束動作。</p><ul class="list-disc list-inside space-y-2 mb-4 text-gray-700"><li><strong>楊氏太極</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>陳氏太極</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>樁功</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>步法</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li><li><strong>呼吸法</strong>：太極練習中的重要元素，有助於全面提升身心健康。</li></ul><h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">學習建議</h2><p class="text-gray-700 leading-relaxed mb-4">全套大約需要5-8分鐘完成。不要急於求成，每一式都要做到位。師傅會逐式教導，確保每個動作都正確。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「我教了三十多年太極，發現很多初學者最大的問題不是學不會，而是太心急。」林燦平師傅說，「太極拳是一輩子的功夫，不要急著學完整套拳。先把基本功練好，每一個動作做到位，比學十套拳都有用。我經常跟學員說：慢就是快。在油塘的課堂上，我從站樁開始教起，讓學員先感受身體的重心和呼吸，然後才慢慢過渡到動作。這樣學出來的太極，才是紮實的。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">全套二十四式大約需要5-8分鐘完成，適合初學者學習。</p><p class="text-gray-700 leading-relaxed mb-4">第一組（起勢、左右野馬分鬃、白鶴亮翅）：建立基本站姿和重心轉移的感覺。</p><p class="text-gray-700 leading-relaxed mb-4">第二組（左右摟膝拗步、手揮琵琶、左右倒卷肱）：訓練手腳協調和後退步法。</p><p class="text-gray-700 leading-relaxed mb-4">第三組（左攬雀尾、右攬雀尾、單鞭）：太極拳的核心動作，包含掤、捋、擠、按四種基本手法。</p><p class="text-gray-700 leading-relaxed mb-4">第四組（雲手、單鞭、高探馬）：訓練腰部旋轉和平衡能力。</p><p class="text-gray-700 leading-relaxed mb-4">第五組（右蹬腳、雙峰貫耳、轉身左蹬腳）：加入腿部動作，增強下肢力量。</p><p class="text-gray-700 leading-relaxed mb-4">第六組（左下勢獨立、右下勢獨立）：訓練柔韌性和單腿平衡。</p><p class="text-gray-700 leading-relaxed mb-4">第七組（左右穿梭、海底針、閃通臂）：多角度訓練身體協調。</p><p class="text-gray-700 leading-relaxed mb-4">第八組（轉身搬攔捶、如封似閉、十字手、收勢）：結束動作，回歸平靜。</p><p class="text-gray-700 leading-relaxed mb-4">在林燦平太極學會，師傅會逐式教導，確保每個動作都正確到位。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-beginner-guide.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳入門指南：初學者必讀的10個基本概念</h4></a><a href="tai-chi-vs-qigong-difference.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳與氣功的分別：兩者有何不同？</h4></a><a href="yang-style-tai-chi-introduction.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">楊氏太極拳介紹：最流行的太極流派</h4></a></div></div>
         <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
@@ -75,6 +105,19 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
-    <script src="js/icons.js"></script>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
+    <script src="../js/icons.js"></script>
+    <script>
+        const _url = window.location.href;
+        const _title = document.title;
+        const _wa = document.getElementById('share-wa');
+        const _fb = document.getElementById('share-fb');
+        const _copy = document.getElementById('share-copy');
+        if (_wa) _wa.href = 'https://wa.me/?text=' + encodeURIComponent(_title + ' ' + _url);
+        if (_fb) _fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_url);
+        if (_copy) _copy.onclick = () => { navigator.clipboard.writeText(_url); _copy.textContent='已複製！'; setTimeout(()=>_copy.textContent='複製連結',2000); };
+    </script>
 </body>
 </html>

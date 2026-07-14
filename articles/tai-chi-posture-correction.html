@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script>
     (function(){
         var d=window.location.origin+window.location.pathname;
@@ -12,15 +10,15 @@
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){m.content=d;});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+        ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+        twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
             try{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
                     if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
-return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -36,19 +34,28 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
     <title>太極拳改善不良姿勢：駝背、寒背的矯正之道 | 林燦平太極學會養生專欄</title>
     <meta name="description" content="不良姿勢是都市人的通病。太極拳能自然糾正駝背、寒背等問題。">
     <meta name="keywords" content="姿勢, 駝背, 寒背, 矯正, 太極拳">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="canonical" href="https://lamtaichi.pages.dev/articles/tai-chi-posture-correction.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="太極拳改善不良姿勢：駝背、寒背的矯正之道">
     <meta property="og:description" content="不良姿勢是都市人的通病。太極拳能自然糾正駝背、寒背等問題。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/tai-chi-posture-correction.html">
     <meta property="og:locale" content="zh_HK">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "太極拳改善不良姿勢：駝背、寒背的矯正之道", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/tai-chi-posture-correction.html", "inLanguage": "zh-HK"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 3, "name": "肩頸腰背", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 4, "name": "太極拳改善不良姿勢：駝背、寒背的矯正之道", "item": "https://lamtaichi.pages.dev/articles/tai-chi-posture-correction.html"}]}</script>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -58,14 +65,37 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
     </nav>
-    <article class="max-w-4xl mx-auto px-4 pt-24 pb-20">
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">太極拳改善不良姿勢：駝背、寒背的矯正之道...</li>
+        </ol>
+    </nav>
+    <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">肩頸腰背</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">太極拳改善不良姿勢：駝背、寒背的矯正之道</h1>
             <p class="text-gray-600 text-lg leading-relaxed">不良姿勢是都市人的通病。太極拳能自然糾正駝背、寒背等問題。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="姿勢">姿勢</span><span class="tag-chip" data-tag="駝背">駝背</span><span class="tag-chip" data-tag="寒背">寒背</span><span class="tag-chip" data-tag="矯正">矯正</span><span class="tag-chip" data-tag="太極拳">太極拳</span></div>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="姿勢">姿勢</span><span class="tag-chip" data-tag="駝背">駝背</span><span class="tag-chip" data-tag="寒背">寒背</span><span class="tag-chip" data-tag="矯正">矯正</span><span class="tag-chip" data-tag="太極拳">太極拳</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+        <span class="text-sm text-gray-500">分享：</span>
+        <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
+        <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
+        <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
+    </div></div>
         </header>
-        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">長期低頭看手機、坐在電腦前，導致越來越多人的姿勢出現問題。駝背、寒背不僅影響外觀，更會引起各種痛症。</p><p class="text-gray-700 leading-relaxed mb-4">太極拳對身型有嚴格的要求：「虛領頂勁」、「含胸拔背」、「沉肩墜肘」。這些要求本身就是最好的姿勢矯正練習。</p><p class="text-gray-700 leading-relaxed mb-4">練習太極拳時，你必須保持脊柱正直，這能強化背部肌肉，糾正長期以來的不良姿勢習慣。</p><p class="text-gray-700 leading-relaxed mb-4">許多學員在練習太極拳數月後，不僅姿勢改善了，身高也「長高」了一兩厘米——其實不是真的長高，而是脊柱恢复了自然的曲度。</p></div>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">長期低頭看手機、坐在電腦前，導致越來越多人的姿勢出現問題。駝背、寒背不僅影響外觀，更會引起各種痛症。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">不良姿勢的都市病</h2><p class="text-gray-700 leading-relaxed mb-4">長期低頭看手機、坐在電腦前，導致越來越多人的姿勢出現問題。駝背、寒背不僅影響外觀，更會引起各種痛症。</p><ul class="list-disc list-inside space-y-1 mb-4 text-gray-700"><li>皮質醇</li><li>肌肉緊張</li><li>血液循環</li></ul><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">太極拳如何自然矯正姿勢</h2><p class="text-gray-700 leading-relaxed mb-4">「虛領頂勁」要求頭頂如懸絲，「含胸拔背」要求胸部微含、背部挺拔，「沉肩墜肘」要求肩膀放鬆下沉。這些要求本身就是最好的姿勢矯正練習。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">姿勢改善的實際效果</h2><p class="text-gray-700 leading-relaxed mb-4">許多學員在練習太極拳數月後，不僅姿勢改善了，身高也「長高」了一兩厘米——其實不是真的長高，而是脊柱恢复了自然的曲度。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「上週有個做 IT 的學生來找我，他原本連手都舉不起來，頸椎痛到睡不好。」林燦平師傅分享道，「我教了他幾個簡單的太極動作，特別是雲手和攬雀尾，讓他每天在家練習。兩個星期後，他告訴我頸椎鬆了很多，睡眠也改善了。太極拳的旋轉動作，對肩頸的放鬆效果真的很顯著。很多辦公室人士來找我，都是因為長期坐寫字樓引起的痛症。太極拳不是藥，但它的效果往往比吃藥更持久。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">太極拳對身型有嚴格的要求：「虛領頂勁」、「含胸拔背」、「沉肩墜肘」。這些要求本身就是最好的姿勢矯正練習。</p><p class="text-gray-700 leading-relaxed mb-4">練習太極拳時，你必須保持脊柱正直，這能強化背部肌肉，糾正長期以來的不良姿勢習慣。</p><p class="text-gray-700 leading-relaxed mb-4">許多學員在練習太極拳數月後，不僅姿勢改善了，身高也「長高」了一兩厘米——其實不是真的長高，而是脊柱恢复了自然的曲度。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-neck-pain-relief.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">肩頸腰背</span><h4 class="text-sm font-bold text-gray-900">太極拳如何舒緩肩頸痛？辦公室人士的救星</h4></a><a href="tai-chi-lower-back-pain.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">肩頸腰背</span><h4 class="text-sm font-bold text-gray-900">太極拳對腰背痛的療效：科學研究與實證</h4></a><a href="tai-chi-frozen-shoulder.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">肩頸腰背</span><h4 class="text-sm font-bold text-gray-900">太極拳能治療五十肩嗎？肩周炎患者的練習指南</h4></a></div></div>
         <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
@@ -75,6 +105,19 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
-    <script src="js/icons.js"></script>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
+    <script src="../js/icons.js"></script>
+    <script>
+        const _url = window.location.href;
+        const _title = document.title;
+        const _wa = document.getElementById('share-wa');
+        const _fb = document.getElementById('share-fb');
+        const _copy = document.getElementById('share-copy');
+        if (_wa) _wa.href = 'https://wa.me/?text=' + encodeURIComponent(_title + ' ' + _url);
+        if (_fb) _fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_url);
+        if (_copy) _copy.onclick = () => { navigator.clipboard.writeText(_url); _copy.textContent='已複製！'; setTimeout(()=>_copy.textContent='複製連結',2000); };
+    </script>
 </body>
 </html>

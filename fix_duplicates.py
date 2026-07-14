@@ -774,9 +774,9 @@ def generate_article_html(article, content_html):
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){{m.content=d;}});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";}});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";}});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
             try{{
                 var j=JSON.parse(s.textContent);
@@ -809,11 +809,10 @@ def generate_article_html(article, content_html):
     <meta name="robots" content="index, follow">
     <script type="application/ld+json">{article_schema}</script>
     <script type="application/ld+json">{breadcrumb_schema}</script>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <style>
@@ -852,9 +851,8 @@ def generate_article_html(article, content_html):
     <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
         <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
     </footer>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/icons.js"></script>
     <script>
-        lucide.createIcons();
         const _url = window.location.href;
         const _title = document.title;
         const _wa = document.getElementById('share-wa');

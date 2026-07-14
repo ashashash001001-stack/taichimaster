@@ -12,9 +12,9 @@ if(c)c.href=d;
 var og=document.querySelectorAll('meta[property="og:url"]');
 og.forEach(function(m){m.content=d;});
 var ogi=document.querySelectorAll('meta[property="og:image"]');
-ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+ogi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
 var twi=document.querySelectorAll('meta[name="twitter:image"]');
-twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";});
+twi.forEach(function(m){if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";});
 document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
 try{
 var j=JSON.parse(s.textContent);
