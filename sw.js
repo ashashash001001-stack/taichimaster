@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taichi-v1';
+const CACHE_NAME = 'taichi-v20260714';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -6,7 +6,9 @@ const STATIC_ASSETS = [
   '/404.html',
   '/favicon.png',
   '/apple-touch-icon.png',
-  '/manifest.json'
+  '/manifest.json',
+  '/css/tailwind.css',
+  '/js/icons.js'
 ];
 
 // Install: cache core assets
@@ -25,42 +27,60 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME)
-          .map((name) => caches.delete(name))
+          .filter((name) => name.startsWith('taichi-'))
+          .map((name) => {
+            if (name !== CACHE_NAME) return caches.delete(name);
+          })
       );
     })
   );
   self.clients.claim();
 });
 
-// Fetch: cache-first for static, network-first for HTML, offline fallback
+// Fetch: network-first for HTML (always check for updates), cache-first for static assets
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // Only handle same-origin requests
   if (url.origin !== self.location.origin) return;
 
-  // Static assets: cache-first
-  if (
-    url.pathname.match(/\.(html|css|js|png|jpg|jpeg|webp|svg|ico|json)$/) ||
-    url.pathname === '/' ||
-    url.pathname === ''
-  ) {
+  // Static assets (CSS, JS, images): cache-first with network fallback
+  if (url.pathname.match(/\.(css|js|png|jpg|jpeg|webp|svg|ico|json)$/)) {
     event.respondWith(
       caches.match(event.request).then((cached) => {
         return cached || fetch(event.request).then((response) => {
-          return caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, response.clone());
-            return response;
-          });
-        }).catch(() => {
-          // Offline fallback for HTML pages
-          if (url.pathname.match(/\.html$/) || url.pathname === '/' || url.pathname === '') {
-            return caches.match('/404.html');
+          if (response.ok) {
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, response.clone());
+            });
           }
-          return new Response('Offline', { status: 503 });
+          return response;
         });
       })
     );
+    return;
   }
+
+  // HTML pages: network-first, fall back to cache
+  if (url.pathname.match(/\.html$/) || url.pathname === '/' || url.pathname === '') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, response.clone());
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request).then((cached) => {
+            return cached || caches.match('/404.html');
+          });
+        })
+    );
+    return;
+  }
+
+  // Everything else: network only
 });
