@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script>
     (function(){
         var d=window.location.origin+window.location.pathname;
@@ -20,7 +18,7 @@
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
                     if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
-return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -36,19 +34,28 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
     <title>太極扇的健康好處：手腕靈活與心肺鍛鍊 | 林燦平太極學會養生專欄</title>
     <meta name="description" content="太極扇能鍛鍊手腕靈活性，同時提供比太極拳更強的心肺鍛鍊。">
     <meta name="keywords" content="太極扇, 健康, 手腕, 心肺, 鍛鍊">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="canonical" href="https://lamtaichi.pages.dev/articles/tai-chi-fan-health-benefits.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="太極扇的健康好處：手腕靈活與心肺鍛鍊">
     <meta property="og:description" content="太極扇能鍛鍊手腕靈活性，同時提供比太極拳更強的心肺鍛鍊。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/tai-chi-fan-health-benefits.html">
     <meta property="og:locale" content="zh_HK">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "太極扇的健康好處：手腕靈活與心肺鍛鍊", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/tai-chi-fan-health-benefits.html", "inLanguage": "zh-HK"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 3, "name": "器械教學", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 4, "name": "太極扇的健康好處：手腕靈活與心肺鍛鍊", "item": "https://lamtaichi.pages.dev/articles/tai-chi-fan-health-benefits.html"}]}</script>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -58,14 +65,37 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
     </nav>
-    <article class="max-w-4xl mx-auto px-4 pt-24 pb-20">
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">太極扇的健康好處：手腕靈活與心肺鍛鍊...</li>
+        </ol>
+    </nav>
+    <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">器械教學</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">太極扇的健康好處：手腕靈活與心肺鍛鍊</h1>
             <p class="text-gray-600 text-lg leading-relaxed">太極扇能鍛鍊手腕靈活性，同時提供比太極拳更強的心肺鍛鍊。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="太極扇">太極扇</span><span class="tag-chip" data-tag="健康">健康</span><span class="tag-chip" data-tag="手腕">手腕</span><span class="tag-chip" data-tag="心肺">心肺</span><span class="tag-chip" data-tag="鍛鍊">鍛鍊</span></div>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="太極扇">太極扇</span><span class="tag-chip" data-tag="健康">健康</span><span class="tag-chip" data-tag="手腕">手腕</span><span class="tag-chip" data-tag="心肺">心肺</span><span class="tag-chip" data-tag="鍛鍊">鍛鍊</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+        <span class="text-sm text-gray-500">分享：</span>
+        <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
+        <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
+        <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
+    </div></div>
         </header>
-        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">太極扇不僅好看，對健康也有很多獨特的好處。</p><p class="text-gray-700 leading-relaxed mb-4">一、手腕鍛鍊：太極扇的開合動作需要手腕的靈活運用。二、心肺鍛鍊：太極扇的動作比太極拳更有力度。三、協調性：扇子的開合變化增加了動作的複雜性。四、趣味性：太極扇的趣味性和表演性比太極拳更高。</p><p class="text-gray-700 leading-relaxed mb-4">林燦平太極學會的太極扇課程適合已掌握基本拳法的學員。</p></div>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">太極扇不僅好看，對健康也有很多獨特的好處。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">太極扇對手腕的鍛鍊</h2><p class="text-gray-700 leading-relaxed mb-4">太極扇的開合動作需要手腕的靈活運用，能增強手腕的力量和靈活性。對於長期使用鍵盤的辦公室人士，這是很好的補充運動。</p><ul class="list-disc list-inside space-y-1 mb-4 text-gray-700"><li>百兵之君</li><li>白蠟桿</li><li>腕力</li></ul><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">太極扇的心肺鍛鍊</h2><p class="text-gray-700 leading-relaxed mb-4">太極扇的動作比太極拳更有力度，開扇時的爆發力能提高心率，提供比太極拳更強的心肺鍛鍊。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">太極扇的趣味性和協調性</h2><p class="text-gray-700 leading-relaxed mb-4">扇子的開合變化增加了動作的複雜性，能顯著提高身體的協調性。太極扇的趣味性和表演性比太極拳更高，能增加練習的動機。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「學器械之前，一定要先把拳術的基本功練好。」林燦平師傅強調，「我見過很多學生急著學劍學刀，但連基本的重心轉移都做不好，結果器械練得歪歪斜斜。我的教學順序一定是：先拳、後器械。基本功紮實了，學器械自然水到渠成。在林燦平太極學會，我們教授太極劍、太極刀、太極扇和鞭桿四種器械。每種器械都有其獨特的魅力和好處。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">一、手腕鍛鍊：太極扇的開合動作需要手腕的靈活運用。二、心肺鍛鍊：太極扇的動作比太極拳更有力度。三、協調性：扇子的開合變化增加了動作的複雜性。四、趣味性：太極扇的趣味性和表演性比太極拳更高。</p><p class="text-gray-700 leading-relaxed mb-4">林燦平太極學會的太極扇課程適合已掌握基本拳法的學員。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-sword-basics.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極劍入門：初學者必知的基礎知識</h4></a><a href="tai-chi-fan-techniques.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極扇教學：剛柔並濟的優美器械</h4></a><a href="tai-chi-broadsword.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">器械教學</span><h4 class="text-sm font-bold text-gray-900">太極刀入門：剛猛有力的太極器械</h4></a></div></div>
         <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
@@ -75,6 +105,19 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
-    <script src="js/icons.js"></script>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
+    <script src="../js/icons.js"></script>
+    <script>
+        const _url = window.location.href;
+        const _title = document.title;
+        const _wa = document.getElementById('share-wa');
+        const _fb = document.getElementById('share-fb');
+        const _copy = document.getElementById('share-copy');
+        if (_wa) _wa.href = 'https://wa.me/?text=' + encodeURIComponent(_title + ' ' + _url);
+        if (_fb) _fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_url);
+        if (_copy) _copy.onclick = () => { navigator.clipboard.writeText(_url); _copy.textContent='已複製！'; setTimeout(()=>_copy.textContent='複製連結',2000); };
+    </script>
 </body>
 </html>

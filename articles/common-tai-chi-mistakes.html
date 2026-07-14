@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script>
     (function(){
         var d=window.location.origin+window.location.pathname;
@@ -20,7 +18,7 @@
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){
                     if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){
-return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
+                        return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
                     }
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){Object.keys(o).forEach(function(k){o[k]=fix(o[k]);});}
@@ -36,19 +34,28 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
     <title>初學太極常見的8個錯誤及改正方法 | 林燦平太極學會養生專欄</title>
     <meta name="description" content="很多太極初學者會犯相同的錯誤。本文列出最常見的8個錯誤及改正方法。">
     <meta name="keywords" content="初學者, 錯誤, 改正, 太極拳, 教學">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="canonical" href="https://lamtaichi.pages.dev/articles/common-tai-chi-mistakes.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="初學太極常見的8個錯誤及改正方法">
     <meta property="og:description" content="很多太極初學者會犯相同的錯誤。本文列出最常見的8個錯誤及改正方法。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/common-tai-chi-mistakes.html">
     <meta property="og:locale" content="zh_HK">
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "初學太極常見的8個錯誤及改正方法", "author": {"@type": "Organization", "name": "林燦平太極學會"}, "publisher": {"@type": "Organization", "name": "林燦平太極學會"}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/common-tai-chi-mistakes.html", "inLanguage": "zh-HK"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 3, "name": "太極入門", "item": "https://lamtaichi.pages.dev/blog.html"}, {"@type": "ListItem", "position": 4, "name": "初學太極常見的8個錯誤及改正方法", "item": "https://lamtaichi.pages.dev/articles/common-tai-chi-mistakes.html"}]}</script>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <style>
         html { scroll-behavior: smooth; }
-        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }
+        .tag-chip { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
         .tag-chip:hover { background-color: #059669; color: white; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -58,14 +65,37 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
     </nav>
-    <article class="max-w-4xl mx-auto px-4 pt-24 pb-20">
+    
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">初學太極常見的8個錯誤及改正方法...</li>
+        </ol>
+    </nav>
+    <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">太極入門</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">初學太極常見的8個錯誤及改正方法</h1>
             <p class="text-gray-600 text-lg leading-relaxed">很多太極初學者會犯相同的錯誤。本文列出最常見的8個錯誤及改正方法。</p>
-            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="初學者">初學者</span><span class="tag-chip" data-tag="錯誤">錯誤</span><span class="tag-chip" data-tag="改正">改正</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="教學">教學</span></div>
+            <div class="flex flex-wrap gap-2 mt-4"><span class="tag-chip" data-tag="初學者">初學者</span><span class="tag-chip" data-tag="錯誤">錯誤</span><span class="tag-chip" data-tag="改正">改正</span><span class="tag-chip" data-tag="太極拳">太極拳</span><span class="tag-chip" data-tag="教學">教學</span>
+    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">
+        <span class="text-sm text-gray-500">分享：</span>
+        <a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>
+        <a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>
+        <button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>
+    </div></div>
         </header>
-        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">學習太極拳的過程中，初學者經常會犯一些共同的錯誤。及早發現並改正這些錯誤，能讓你的進步更加順利。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤一：身體太僵硬。改正：想像自己像棉花一樣柔軟，放鬆肩膀，放鬆手臂。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤二：重心不清楚。改正：每一刻都要知道重心在哪隻腳，虛實分明。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤三：動作太快。改正：太極拳要慢練，越慢越能體會動作的細節。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤四：低頭看腳。改正：頭要保持正直，眼睛平視前方。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤五：膝蓋超過腳尖。改正：弓步時膝蓋不要超過腳尖，以免損傷膝關節。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤六：呼吸急促。改正：保持自然呼吸，不要憋氣。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤七：只動手不動腰。改正：所有動作都要由腰部帶動。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤八：三天打魚兩天曬網。改正：每天堅持練習15分鐘，比一週練一次兩小時更有效。</p><p class="text-gray-700 leading-relaxed mb-4">有師傅指導是避免這些錯誤的最佳方法。林燦平師傅會即時糾正你的動作，確保學習方向正確。</p></div>
+        <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm"><p class="text-gray-700 leading-relaxed mb-4">學習太極拳的過程中，初學者經常會犯一些共同的錯誤。及早發現並改正這些錯誤，能讓你的進步更加順利。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">身體太僵硬</h2><p class="text-gray-700 leading-relaxed mb-4">初學者常犯的錯誤是用力過度，導致動作僵硬。想像自己像棉花一樣柔軟，放鬆肩膀，放鬆手臂。</p><ul class="list-disc list-inside space-y-1 mb-4 text-gray-700"><li>楊氏太極</li><li>陳氏太極</li><li>樁功</li></ul><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">重心不清楚和動作太快</h2><p class="text-gray-700 leading-relaxed mb-4">每一刻都要知道重心在哪隻腳，虛實分明。太極拳要慢練，越慢越能體會動作的細節。低頭看腳也是常見錯誤。</p><h2 class="text-xl font-bold text-gray-900 mt-6 mb-3">膝蓋超過腳尖和呼吸急促</h2><p class="text-gray-700 leading-relaxed mb-4">弓步時膝蓋不要超過腳尖，以免損傷膝關節。保持自然呼吸，不要憋氣。所有動作都要由腰部帶動。</p>
+    <div class="bg-emerald-50 border-l-4 border-emerald-600 p-6 my-6 rounded-r-lg">
+        <h3 class="text-lg font-bold text-emerald-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">👨‍🏫</span>林師傅點評
+        </h3>
+        <p class="text-gray-700 leading-relaxed italic">「我教了三十多年太極，發現很多初學者最大的問題不是學不會，而是太心急。」林燦平師傅說，「太極拳是一輩子的功夫，不要急著學完整套拳。先把基本功練好，每一個動作做到位，比學十套拳都有用。我經常跟學員說：慢就是快。在油塘的課堂上，我從站樁開始教起，讓學員先感受身體的重心和呼吸，然後才慢慢過渡到動作。這樣學出來的太極，才是紮實的。」</p>
+    </div><p class="text-gray-700 leading-relaxed mb-4">錯誤一：身體太僵硬。改正：想像自己像棉花一樣柔軟，放鬆肩膀，放鬆手臂。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤二：重心不清楚。改正：每一刻都要知道重心在哪隻腳，虛實分明。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤三：動作太快。改正：太極拳要慢練，越慢越能體會動作的細節。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤四：低頭看腳。改正：頭要保持正直，眼睛平視前方。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤五：膝蓋超過腳尖。改正：弓步時膝蓋不要超過腳尖，以免損傷膝關節。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤六：呼吸急促。改正：保持自然呼吸，不要憋氣。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤七：只動手不動腰。改正：所有動作都要由腰部帶動。</p><p class="text-gray-700 leading-relaxed mb-4">錯誤八：三天打魚兩天曬網。改正：每天堅持練習15分鐘，比一週練一次兩小時更有效。</p><p class="text-gray-700 leading-relaxed mb-4">有師傅指導是避免這些錯誤的最佳方法。林燦平師傅會即時糾正你的動作，確保學習方向正確。</p></div>
+        <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../index.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回首頁 →</a></h3><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><a href="tai-chi-beginner-guide.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳入門指南：初學者必讀的10個基本概念</h4></a><a href="tai-chi-vs-qigong-difference.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">太極拳與氣功的分別：兩者有何不同？</h4></a><a href="yang-style-tai-chi-introduction.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200"><span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">太極入門</span><h4 class="text-sm font-bold text-gray-900">楊氏太極拳介紹：最流行的太極流派</h4></a></div></div>
         <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
@@ -75,6 +105,19 @@ return o.replace(/https:\/\/lamtaichi\.pages\.dev/g,b);
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
-    <script src="js/icons.js"></script>
+    <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
+        <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
+    </footer>
+    <script src="../js/icons.js"></script>
+    <script>
+        const _url = window.location.href;
+        const _title = document.title;
+        const _wa = document.getElementById('share-wa');
+        const _fb = document.getElementById('share-fb');
+        const _copy = document.getElementById('share-copy');
+        if (_wa) _wa.href = 'https://wa.me/?text=' + encodeURIComponent(_title + ' ' + _url);
+        if (_fb) _fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(_url);
+        if (_copy) _copy.onclick = () => { navigator.clipboard.writeText(_url); _copy.textContent='已複製！'; setTimeout(()=>_copy.textContent='複製連結',2000); };
+    </script>
 </body>
 </html>
