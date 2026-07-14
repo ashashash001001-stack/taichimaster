@@ -773,9 +773,7 @@ def generate_article_html(article):
     return f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
-    <script>
+    <script defer>
     (function(){{
         var d=window.location.origin+window.location.pathname;
         var b=window.location.origin;
@@ -784,15 +782,15 @@ def generate_article_html(article):
         var og=document.querySelectorAll('meta[property="og:url"]');
         og.forEach(function(m){{m.content=d;}});
         var ogi=document.querySelectorAll('meta[property="og:image"]');
-        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";}});
         var twi=document.querySelectorAll('meta[name="twitter:image"]');
-        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.webp";}});
         document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
             try{{
                 var j=JSON.parse(s.textContent);
                 var fix=function(o){{
                     if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){{
-return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
+                        return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
                     }}
                     if(Array.isArray(o))return o.map(fix);
                     if(typeof o==="object"&&o!==null){{Object.keys(o).forEach(function(k){{o[k]=fix(o[k]);}});}}
@@ -814,11 +812,13 @@ return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
     <meta property="og:description" content="{html.escape(article["summary"])}">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:locale" content="zh_HK">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="../css/tailwind.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lamtaichi.pages.dev/class.webp">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }}
@@ -849,8 +849,9 @@ return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>lucide.createIcons();</script>
+    <script src="../js/icons.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 </body>
 </html>'''
 
