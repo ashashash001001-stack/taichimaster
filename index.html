@@ -219,10 +219,12 @@
     <!-- Review Schema -->
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "林燦平太極學會", "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "128", "bestRating": "5", "worstRating": "1"}, "review": [{"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "author": {"@type": "Person", "name": "林小姐"}, "reviewBody": "以前長期坐寫字樓，腰背好痛。跟林師傅學左三個月，學識放鬆膊頭，背痛真係好左好多，夜晚都好訓左！"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "author": {"@type": "Person", "name": "張先生"}, "reviewBody": "師傅教得好細心，每一個動作都會解釋原理，除左拳仲學識用扇，非常好玩又實用！"}, {"@type": "Review", "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "author": {"@type": "Person", "name": "Mike Wong"}, "reviewBody": "原本以為太極好悶，試左一堂之後發現原來好多學問。上堂氣氛好好，每次上完堂都覺得成身鬆哂。"}]}</script>
 
-    <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preload" href="css/tailwind.css" as="style">
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
         html { scroll-behavior: smooth; }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -237,7 +239,7 @@
         @media (prefers-color-scheme: dark) {
             body { background: #1c1917; color: #e7e5e4; }
             .bg-white, .bg-stone-50, .bg-stone-100 { background-color: #292524; }
-            .bg-white\\/95 { background-color: rgba(28,25,23,0.95); }
+            .bg-white\/95 { background-color: rgba(28,25,23,0.95); }
             .text-gray-900, .text-gray-800 { color: #e7e5e4; }
             .text-gray-600, .text-gray-500 { color: #a8a29e; }
             .border-stone-200, .border-stone-300 { border-color: #44403c; }
@@ -300,8 +302,9 @@
             <picture>
                 <source srcset="class.webp" type="image/webp">
                 <img 
-                    src="class.png" 
+                    src="class.webp" 
                     alt="林燦平師傅於油塘教授太極拳班上課實況" 
+                    fetchpriority="high"
                     class="w-full h-full object-cover opacity-60"
                 />
             </picture>
@@ -906,10 +909,14 @@
         <i data-lucide="chevron-up" class="w-6 h-6"></i>
     </button>
 
-    <!-- JavaScript -->
+    <!-- Lucide Icons （非阻斷載入） -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+    </script>
 
+    <!-- JavaScript -->
+    <script>
         // 手機版選單
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
