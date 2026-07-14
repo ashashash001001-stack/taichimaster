@@ -1,0 +1,26 @@
+{
+  "name": "taichimaster",
+  "version": "1.0.0",
+  "description": "> 油塘太極班招生 | 教授太極拳、刀、劍、扇、鞭桿 | 歡迎任何年齡及初學者",
+  "main": "sw.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashashash001001-stack/taichimaster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashashash001001-stack/taichimaster/issues"
+  },
+  "homepage": "https://github.com/ashashash001001-stack/taichimaster#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
