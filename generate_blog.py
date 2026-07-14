@@ -773,6 +773,36 @@ def generate_article_html(article):
     return f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+    <script>
+    (function(){{
+        var d=window.location.origin+window.location.pathname;
+        var b=window.location.origin;
+        var c=document.querySelector('link[rel="canonical"]');
+        if(c)c.href=d;
+        var og=document.querySelectorAll('meta[property="og:url"]');
+        og.forEach(function(m){{m.content=d;}});
+        var ogi=document.querySelectorAll('meta[property="og:image"]');
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        var twi=document.querySelectorAll('meta[name="twitter:image"]');
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
+            try{{
+                var j=JSON.parse(s.textContent);
+                var fix=function(o){{
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){{
+return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
+                    }}
+                    if(Array.isArray(o))return o.map(fix);
+                    if(typeof o==="object"&&o!==null){{Object.keys(o).forEach(function(k){{o[k]=fix(o[k]);}});}}
+                    return o;
+                }};
+                s.textContent=JSON.stringify(fix(j),null,0);
+            }}catch(e){{}}
+        }});
+    }})();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{html.escape(article["title"])} | 林燦平太極學會養生專欄</title>
@@ -784,8 +814,11 @@ def generate_article_html(article):
     <meta property="og:description" content="{html.escape(article["summary"])}">
     <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
     <meta property="og:locale" content="zh_HK">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="stylesheet" href="../css/tailwind.css">
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }}
@@ -816,6 +849,7 @@ def generate_article_html(article):
             <a href="../blog.html" class="text-emerald-700 hover:text-emerald-800 font-medium inline-flex items-center"><i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i>返回養生專欄</a>
         </div>
     </article>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>lucide.createIcons();</script>
 </body>
 </html>'''
@@ -850,6 +884,36 @@ categories_json = json.dumps(all_categories, ensure_ascii=False)
 blog_html = f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+    <script>
+    (function(){{
+        var d=window.location.origin+window.location.pathname;
+        var b=window.location.origin;
+        var c=document.querySelector('link[rel="canonical"]');
+        if(c)c.href=d;
+        var og=document.querySelectorAll('meta[property="og:url"]');
+        og.forEach(function(m){{m.content=d;}});
+        var ogi=document.querySelectorAll('meta[property="og:image"]');
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        var twi=document.querySelectorAll('meta[name="twitter:image"]');
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
+            try{{
+                var j=JSON.parse(s.textContent);
+                var fix=function(o){{
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){{
+                        return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
+                    }}
+                    if(Array.isArray(o))return o.map(fix);
+                    if(typeof o==="object"&&o!==null){{Object.keys(o).forEach(function(k){{o[k]=fix(o[k]);}});}}
+                    return o;
+                }};
+                s.textContent=JSON.stringify(fix(j),null,0);
+            }}catch(e){{}}
+        }});
+    }})();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>養生專欄 | 林燦平太極學會 - 太極拳健康知識庫</title>
@@ -861,8 +925,11 @@ blog_html = f'''<!DOCTYPE html>
     <meta property="og:description" content="100篇太極拳健康知識文章，涵蓋入門教學、痛症舒緩、長者健康、心理健康等主題。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/blog.html">
     <meta property="og:locale" content="zh_HK">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; }}
@@ -1009,6 +1076,7 @@ blog_html = f'''<!DOCTYPE html>
     // Initial render
     renderArticles();
     </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </body>
 </html>'''
 
