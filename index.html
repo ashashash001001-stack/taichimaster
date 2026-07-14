@@ -630,19 +630,24 @@
                     </div>
                 </div>
 
-                <!-- 右側：地圖模擬 -->
+                <!-- 右側：地圖點擊載入 -->
                 <div class="w-full md:w-1/2 h-80 md:h-auto min-h-[400px] bg-stone-200 rounded-2xl overflow-hidden shadow-lg relative">
-                     <iframe 
-                        width="100%" 
-                        height="100%" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        src="https://maps.google.com/maps?q=香港小童群益會賽馬會油塘青少年綜合服務中心&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                        title="Google Maps Location"
-                        class="absolute inset-0 w-full h-full"
-                    ></iframe>
+                    <!-- Static placeholder + click-to-load overlay -->
+                    <div id="map-placeholder" class="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center bg-stone-300">
+                        <!-- Screenshot-style placeholder showing the map area -->
+                        <picture>
+                            <source srcset="images/class_hall.webp" type="image/webp">
+                            <img src="images/class_hall.webp" alt="上課地點：小童群益會前空地（點擊載入地圖）" loading="lazy" width="800" height="600" class="w-full h-full object-cover opacity-70"/>
+                        </picture>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black/20">
+                            <div class="bg-emerald-700 text-white px-6 py-3 rounded-full shadow-lg font-bold text-sm flex items-center gap-2 hover:bg-emerald-800 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                                點擊載入地圖
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Iframe injected here on click -->
+                    <div id="map-container" class="absolute inset-0 w-full h-full hidden"></div>
                 </div>
 
             </div>
@@ -1024,6 +1029,37 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+        // Click-to-load Google Maps
+        const mapPlaceholder = document.getElementById('map-placeholder');
+        const mapContainer = document.getElementById('map-container');
+        if (mapPlaceholder && mapContainer) {
+            mapPlaceholder.addEventListener('click', () => {
+                mapPlaceholder.remove();
+                mapContainer.classList.remove('hidden');
+                const iframe = document.createElement('iframe');
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.frameBorder = '0';
+                iframe.scrolling = 'no';
+                iframe.marginHeight = '0';
+                iframe.marginWidth = '0';
+                iframe.src = 'https://maps.google.com/maps?q=香港小童群益會賽馬會油塘青少年綜合服務中心&t=&z=17&ie=UTF8&iwloc=&output=embed';
+                iframe.title = 'Google Maps Location';
+                iframe.className = 'absolute inset-0 w-full h-full';
+                iframe.setAttribute('loading', 'lazy');
+                mapContainer.appendChild(iframe);
+            });
+            mapPlaceholder.setAttribute('tabindex', '0');
+            mapPlaceholder.setAttribute('role', 'button');
+            mapPlaceholder.setAttribute('aria-label', '點擊載入 Google 地圖');
+            mapPlaceholder.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    mapPlaceholder.click();
+                }
+            });
+        }
 
         // 頁尾表單 → WhatsApp
         const contactForm = document.getElementById('contact-form');
