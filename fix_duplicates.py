@@ -809,10 +809,13 @@ def generate_article_html(article, content_html):
     <meta name="robots" content="index, follow">
     <script type="application/ld+json">{article_schema}</script>
     <script type="application/ld+json">{breadcrumb_schema}</script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="stylesheet" href="../css/tailwind.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }}
@@ -849,6 +852,7 @@ def generate_article_html(article, content_html):
     <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
         <p>&copy; 2026 林燦平太極學會. All Rights Reserved.</p>
     </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
         const _url = window.location.href;

@@ -87,8 +87,41 @@ def gen_page(r):
       }}
     }}
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+    <script>
+    (function(){{
+        var d=window.location.origin+window.location.pathname;
+        var b=window.location.origin;
+        var c=document.querySelector('link[rel="canonical"]');
+        if(c)c.href=d;
+        var og=document.querySelectorAll('meta[property="og:url"]');
+        og.forEach(function(m){{m.content=d;}});
+        var ogi=document.querySelectorAll('meta[property="og:image"]');
+        ogi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        var twi=document.querySelectorAll('meta[name="twitter:image"]');
+        twi.forEach(function(m){{if(m.content&&m.content.indexOf("lamtaichi")>-1)m.content=b+"/class.png";}});
+        document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){{
+            try{{
+                var j=JSON.parse(s.textContent);
+                var fix=function(o){{
+                    if(typeof o==="string"&&o.indexOf("lamtaichi")>-1){{
+                        return o.replace(/https:\\/\\/lamtaichi\\.pages\\.dev/g,b);
+                    }}
+                    if(Array.isArray(o))return o.map(fix);
+                    if(typeof o==="object"&&o!==null){{Object.keys(o).forEach(function(k){{o[k]=fix(o[k]);}});}}
+                    return o;
+                }};
+                s.textContent=JSON.stringify(fix(j),null,0);
+            }}catch(e){{}}
+        }});
+    }})();
+    </script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>html {{ scroll-behavior: smooth; }}</style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -217,6 +250,7 @@ def gen_page(r):
         <p class="mt-2"><a href="index.html" class="text-emerald-400 hover:text-emerald-300">返回首頁</a></p>
     </footer>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>lucide.createIcons();</script>
 </body>
 </html>'''
