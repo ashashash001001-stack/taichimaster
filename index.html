@@ -236,6 +236,9 @@
         .schedule-card { transition: opacity 0.3s ease; }
         @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(5,150,105,0.4); } 70% { box-shadow: 0 0 0 10px rgba(5,150,105,0); } 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0); } }
         .pulse-cta { animation: pulse-ring 2s infinite; }
+        /* Mobile menu icon toggle via aria-expanded */
+        #mobile-menu-btn[aria-expanded="false"] .lucide-x { display: none; }
+        #mobile-menu-btn[aria-expanded="true"] .lucide-menu { display: none; }
         /* Dark mode */
         @media (prefers-color-scheme: dark) {
             body { background: #1c1917; color: #e7e5e4; }
@@ -280,7 +283,7 @@
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none" aria-label="開啟手機選單" aria-expanded="false">
                         <i data-lucide="menu" id="menu-icon"></i>
-                        <i data-lucide="x" id="close-icon" class="hidden"></i>
+                        <i data-lucide="x" id="close-icon"></i>
                     </button>
                 </div>
             </div>
@@ -924,24 +927,21 @@
 
     <!-- JavaScript -->
     <script>
-        // 手機版選單
+        // 手機版選單 - icon visibility via CSS aria-expanded
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         menuBtn.addEventListener('click', () => {
+            const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', String(!expanded));
             mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
+                menuBtn.setAttribute('aria-expanded', 'false');
                 mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
             });
         });
 
