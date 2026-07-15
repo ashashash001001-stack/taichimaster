@@ -885,8 +885,6 @@ categories_json = json.dumps(all_categories, ensure_ascii=False)
 blog_html = f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
     <script>
     (function(){{
         var d=window.location.origin+window.location.pathname;
@@ -927,7 +925,6 @@ blog_html = f'''<!DOCTYPE html>
     <meta property="og:url" content="https://lamtaichi.pages.dev/blog.html">
     <meta property="og:locale" content="zh_HK">
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="stylesheet" href="css/tailwind.css">
@@ -1077,7 +1074,10 @@ blog_html = f'''<!DOCTYPE html>
     // Initial render
     renderArticles();
     </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/icons.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+
 </body>
 </html>'''
 
