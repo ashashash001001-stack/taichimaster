@@ -236,9 +236,9 @@
         .schedule-card { transition: opacity 0.3s ease; }
         @keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 rgba(5,150,105,0.4); } 70% { box-shadow: 0 0 0 10px rgba(5,150,105,0); } 100% { box-shadow: 0 0 0 0 rgba(5,150,105,0); } }
         .pulse-cta { animation: pulse-ring 2s infinite; }
-        /* Mobile menu icon toggle via aria-expanded */
-        #mobile-menu-btn[aria-expanded="false"] .lucide-x { display: none; }
-        #mobile-menu-btn[aria-expanded="true"] .lucide-menu { display: none; }
+        /* Mobile menu icon toggle via aria-expanded (uses id, not class — createIcon loses lucide-{name} classes) */
+        #mobile-menu-btn[aria-expanded="false"] #close-icon { display: none; }
+        #mobile-menu-btn[aria-expanded="true"] #menu-icon { display: none; }
         /* Dark mode */
         @media (prefers-color-scheme: dark) {
             body { background: #1c1917; color: #e7e5e4; }

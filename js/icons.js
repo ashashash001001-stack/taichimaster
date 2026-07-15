@@ -200,8 +200,12 @@ const ICONS = {
 function createIcon(name, attrs = {}) {
   const svg = ICONS[name];
   if (!svg) return '';
+  // Strip existing class from template (it's the hardcoded "lucide lucide-{name}")
+  // so the attrs.class (or fallback "lucide") is the single source of truth.
+  let result = svg.replace(/ class="[^"]*"/, '');
   const attrStr = Object.entries(attrs).map(([k,v]) => `${k}="${v}"`).join(' ');
-  return svg.replace('<svg', `<svg ${attrStr}`);
+  result = result.replace('<svg', `<svg ${attrStr}`);
+  return result;
 }
 
 // Replace all [data-lucide] elements with inline SVG
