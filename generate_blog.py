@@ -767,9 +767,39 @@ assert len(articles) == 100, f"Expected 100 articles, got {len(articles)}"
 # ============================================================
 # Generate individual article HTML files
 # ============================================================
-def generate_article_html(article):
+def generate_article_html(article, all_articles):
     tags_html = "".join([f'<span class="tag-chip" data-tag="{html.escape(tag)}">{html.escape(tag)}</span>' for tag in article['tags']])
     content_html = "".join([f'<p class="text-gray-700 leading-relaxed mb-4">{html.escape(p)}</p>' for p in article['content']])
+
+    # Build related articles (same category, closest id, max 3)
+    same_category = [a for a in all_articles if a['category'] == article['category'] and a['id'] != article['id']]
+    same_category.sort(key=lambda a: abs(a['id'] - article['id']))
+    related = same_category[:3]
+    related_section = ''
+    if related:
+        related_cards = "\n".join([
+            f'<a href="{a["slug"]}.html" class="bg-stone-50 rounded-xl p-5 hover:bg-white hover:shadow-md transition border border-stone-200">'
+            f'<span class="inline-block py-0.5 px-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium mb-2">{html.escape(a["category"])}</span>'
+            f'<h4 class="text-sm font-bold text-gray-900">{html.escape(a["title"])}</h4>'
+            f'</a>'
+            for a in related
+        ])
+        related_section = (
+            '<div class="mt-12">'
+            '<h3 class="text-xl font-bold text-gray-900 mb-4">相關文章推薦 <a href="../blog.html" class="text-sm font-normal text-emerald-700 hover:underline ml-2">返回養生專欄 →</a></h3>'
+            f'<div class="grid grid-cols-1 md:grid-cols-3 gap-4">{related_cards}</div>'
+            '</div>'
+        )
+
+    share_html = (
+        '<div class="flex items-center gap-3 mt-6 pt-6 border-t border-stone-200">'
+        '<span class="text-sm text-gray-500">分享：</span>'
+        '<a id="share-wa" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-green-600 hover:text-green-700">WhatsApp</a>'
+        '<a id="share-fb" href="#" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-700">Facebook</a>'
+        '<button id="share-copy" class="text-sm text-gray-600 hover:text-gray-700">複製連結</button>'
+        '</div>'
+    )
+
     return f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
@@ -805,16 +835,18 @@ def generate_article_html(article):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{html.escape(article["title"])} | 林燦平太極學會養生專欄</title>
     <meta name="description" content="{html.escape(article["summary"])}">
-    <meta name="keywords" content="{", ".join(article["tags"])}">
-    <link rel="canonical" href="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
+    <meta name="keywords" content="{html.escape(', '.join(article['tags']))}">
+    <link rel="canonical" href="https://lamtaichi.pages.dev/articles/{html.escape(article['slug'])}.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{html.escape(article["title"])}">
     <meta property="og:description" content="{html.escape(article["summary"])}">
-    <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{article["slug"]}.html">
+    <meta property="og:url" content="https://lamtaichi.pages.dev/articles/{html.escape(article['slug'])}.html">
     <meta property="og:locale" content="zh_HK">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://lamtaichi.pages.dev/class.webp">
     <meta name="robots" content="index, follow">
+    <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "Article", "headline": "{html.escape(article["title"])}", "author": {{"@type": "Organization", "name": "林燦平太極學會"}}, "publisher": {{"@type": "Organization", "name": "林燦平太極學會"}}, "datePublished": "2025-01-01", "dateModified": "2026-04-04", "mainEntityOfPage": "https://lamtaichi.pages.dev/articles/{article["slug"]}.html", "inLanguage": "zh-HK"}}</script>
+    <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://lamtaichi.pages.dev/"}}, {{"@type": "ListItem", "position": 2, "name": "養生專欄", "item": "https://lamtaichi.pages.dev/blog.html"}}, {{"@type": "ListItem", "position": 3, "name": "{html.escape(article["category"])}", "item": "https://lamtaichi.pages.dev/blog.html"}}, {{"@type": "ListItem", "position": 4, "name": "{html.escape(article["title"])}", "item": "https://lamtaichi.pages.dev/articles/{article["slug"]}.html"}}]}}</script>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -832,7 +864,16 @@ def generate_article_html(article):
             <a href="../blog.html" class="text-gray-600 hover:text-emerald-700 flex items-center"><i data-lucide="book-open" class="w-4 h-4 mr-1"></i>養生專欄</a>
         </div>
     </nav>
-    <article class="max-w-4xl mx-auto px-4 pt-24 pb-20">
+    <nav class="max-w-4xl mx-auto px-4 pt-20 pb-2" aria-label="Breadcrumb">
+        <ol class="flex items-center text-sm text-gray-500 space-x-2">
+            <li><a href="../index.html" class="hover:text-emerald-700">首頁</a></li>
+            <li class="text-gray-400">›</li>
+            <li><a href="../blog.html" class="hover:text-emerald-700">養生專欄</a></li>
+            <li class="text-gray-400">›</li>
+            <li class="text-gray-800 font-medium truncate max-w-xs">{html.escape(article["title"])}</li>
+        </ol>
+    </nav>
+    <article class="max-w-4xl mx-auto px-4 pt-4 pb-20">
         <header class="mb-10">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-medium mb-4">{html.escape(article["category"])}</span>
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">{html.escape(article["title"])}</h1>
@@ -840,6 +881,8 @@ def generate_article_html(article):
             <div class="flex flex-wrap gap-2 mt-4">{tags_html}</div>
         </header>
         <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm">{content_html}</div>
+        {share_html}
+        {related_section}
         <div class="mt-12 bg-emerald-900 text-white rounded-2xl p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">想親身體驗太極拳的好處？</h2>
             <p class="text-emerald-200 mb-6">歡迎隨時親臨油塘觀課，滿意再報名！</p>
@@ -850,6 +893,18 @@ def generate_article_html(article):
         </div>
     </article>
     <script src="../js/icons.js"></script>
+    <script>
+    (function(){{
+        var url = window.location.href;
+        var title = document.title;
+        var wa = document.getElementById('share-wa');
+        var fb = document.getElementById('share-fb');
+        var copy = document.getElementById('share-copy');
+        if (wa) wa.href = 'https://wa.me/?text=' + encodeURIComponent(title + ' ' + url);
+        if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+        if (copy) copy.addEventListener('click', function(){{navigator.clipboard.writeText(url);alert('連結已複製！');}});
+    }})();
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 </body>
@@ -859,7 +914,7 @@ def generate_article_html(article):
 for article in articles:
     filepath = os.path.join(ARTICLES_DIR, f'{article["slug"]}.html')
     with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(generate_article_html(article))
+        f.write(generate_article_html(article, articles))
     print(f'  Created: {filepath}')
 
 # ============================================================
