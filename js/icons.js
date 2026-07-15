@@ -209,7 +209,15 @@ function initIcons() {
   document.querySelectorAll('[data-lucide]').forEach(el => {
     const name = el.getAttribute('data-lucide');
     const classes = el.className;
-    const html = createIcon(name, { class: classes || 'lucide' });
+    // Preserve ALL original attributes (id, class, style, etc.)
+    const attrs = {};
+    for (const attr of el.attributes) {
+      if (attr.name !== 'data-lucide') {
+        attrs[attr.name] = attr.value;
+      }
+    }
+    if (!attrs.class) attrs.class = 'lucide';
+    const html = createIcon(name, attrs);
     el.outerHTML = html;
   });
 }
