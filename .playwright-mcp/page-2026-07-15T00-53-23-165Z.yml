@@ -1,0 +1,409 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "PageSpeed Insights logo PageSpeed Insights" [ref=e3] [cursor=pointer]:
+      - /url: ./
+      - img "PageSpeed Insights logo" [ref=e4]
+      - generic [ref=e5]: PageSpeed Insights
+    - generic [ref=e6]:
+      - button "複製連結" [ref=e8]
+      - generic [ref=e16]:
+        - generic [ref=e18]: 文件
+        - link "文件" [ref=e19] [cursor=pointer]:
+          - /url: https://developers.google.com/speed/docs/insights/v5/about
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]: 這個網站會使用 Google 的 Cookie 提供服務及分析流量。
+      - generic [ref=e29]:
+        - generic [ref=e31]:
+          - generic [ref=e33]: 瞭解詳情。
+          - link "瞭解詳情。" [ref=e34] [cursor=pointer]:
+            - /url: https://policies.google.com/technologies/cookies
+        - button "好，我知道了。" [ref=e36]
+    - generic [ref=e94]: 報告建立時間：2026年7月15日 上午8:52:49
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - textbox [ref=e98]:
+          - /placeholder: 輸入網頁網址
+          - text: https://lamtaichi.pages.dev/
+        - paragraph [ref=e100]: 請輸入有效的網址
+      - button "分析" [ref=e102]
+    - generic [ref=e108]:
+      - tablist [ref=e109]:
+        - generic [ref=e112]:
+          - tab "行動裝置" [selected] [ref=e113] [cursor=pointer]:
+            - generic:
+              - generic: smartphone
+              - generic: 行動裝置
+          - tab "電腦" [ref=e115] [cursor=pointer]:
+            - generic:
+              - generic: computer
+              - generic: 電腦
+      - tabpanel "行動裝置" [ref=e117]:
+        - generic [ref=e119]:
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: 瞭解實際使用者體驗
+              - generic [ref=e125]:
+                - button "button" [ref=e127] [cursor=pointer]
+                - generic [ref=e131]: 沒有資料
+            - separator [ref=e132]
+          - generic [ref=e133]:
+            - generic [ref=e134]: 診斷效能問題
+            - article [ref=e140]:
+              - generic [ref=e141]:
+                - generic [ref=e146]:
+                  - link "79 效能" [ref=e147] [cursor=pointer]:
+                    - /url: "#performance"
+                    - generic [ref=e152]: "79"
+                    - generic [ref=e153]: 效能
+                  - link "95 無障礙功能" [ref=e154] [cursor=pointer]:
+                    - /url: "#accessibility"
+                    - generic [ref=e159]: "95"
+                    - generic [ref=e160]: 無障礙功能
+                  - link "100 最佳做法" [ref=e161] [cursor=pointer]:
+                    - /url: "#best-practices"
+                    - generic [ref=e166]: "100"
+                    - generic [ref=e167]: 最佳做法
+                  - link "100 搜尋引擎最佳化 (SEO)" [ref=e168] [cursor=pointer]:
+                    - /url: "#seo"
+                    - generic [ref=e173]: "100"
+                    - generic [ref=e174]: 搜尋引擎最佳化 (SEO)
+                  - link "1/3 代理瀏覽" [ref=e175] [cursor=pointer]:
+                    - /url: "#agentic-browsing"
+                    - generic [ref=e176]: 1/3
+                    - generic [ref=e180]: 代理瀏覽
+                - generic [ref=e182]:
+                  - generic [ref=e184]:
+                    - generic [ref=e185]:
+                      - generic [ref=e186]:
+                        - img [ref=e190]:
+                          - generic [ref=e191]: "79"
+                          - generic [ref=e196]:
+                            - generic:
+                              - generic: FCP
+                              - generic: "+10"
+                            - generic:
+                              - generic: LCP
+                              - generic: "+18"
+                            - generic:
+                              - generic: TBT
+                              - generic: "+30"
+                            - generic:
+                              - generic: CLS
+                              - generic: "+11"
+                            - generic:
+                              - generic: SI
+                              - generic: "+10"
+                          - generic [ref=e198]: 效能
+                        - generic [ref=e200]:
+                          - generic [ref=e201]:
+                            - text: 此為預估值，可能與實際情況有所不同。系統會直接根據這些指標
+                            - link "計算效能分數" [ref=e202] [cursor=pointer]:
+                              - /url: https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+                            - text: 。
+                          - link "查看計算機。" [ref=e203] [cursor=pointer]:
+                            - /url: https://googlechrome.github.io/lighthouse/scorecalc/#FCP=982&LCP=3254&TBT=23&CLS=0.28&SI=982&TTI=3304&device=mobile&version=13.4.0
+                        - generic [ref=e205]:
+                          - generic [ref=e206]: 0–49
+                          - generic [ref=e207]: 50–89
+                          - generic [ref=e208]: 90–100
+                      - img "Final Screenshot" [ref=e211]
+                    - generic [ref=e212]:
+                      - checkbox "Toggle the display of metric descriptions" [ref=e213]
+                      - generic [ref=e214]:
+                        - generic [ref=e215]: 指標
+                        - generic [ref=e216] [cursor=pointer]: 展開檢視畫面
+                      - generic [ref=e217]:
+                        - generic [ref=e219]:
+                          - generic [ref=e221]: First Contentful Paint
+                          - generic [ref=e222]: 1.0 秒
+                        - generic [ref=e224]:
+                          - generic [ref=e226]: Largest Contentful Paint
+                          - generic [ref=e227]: 3.3 秒
+                        - generic [ref=e229]:
+                          - generic [ref=e231]: Total Blocking Time
+                          - generic [ref=e232]: 20 毫秒
+                        - generic [ref=e234]:
+                          - generic [ref=e236]: Cumulative Layout Shift
+                          - generic [ref=e237]: "0.282"
+                        - generic [ref=e239]:
+                          - generic [ref=e241]: Speed Index
+                          - generic [ref=e242]: 1.0 秒
+                      - list [ref=e243]:
+                        - listitem [ref=e244]: Captured at 2026年7月15日 上午8:52 [GMT+8]
+                        - listitem [ref=e245]: 已模擬 Moto G Power with Lighthouse 13.4.0
+                        - listitem [ref=e246]: 單頁工作階段
+                        - listitem [ref=e247]: 初次載入網頁
+                        - listitem [ref=e248]: 慢速 4G 節流
+                        - listitem [ref=e249]: Using HeadlessChromium 149.0.7827.155 with lr
+                      - button "查看矩形式樹狀結構圖" [ref=e251] [cursor=pointer]
+                    - generic [ref=e253]:
+                      - img "Screenshot" [ref=e255]
+                      - img "Screenshot" [ref=e257]
+                      - img "Screenshot" [ref=e259]
+                      - img "Screenshot" [ref=e261]
+                      - img "Screenshot" [ref=e263]
+                      - img "Screenshot" [ref=e265]
+                      - img "Screenshot" [ref=e267]
+                      - img "Screenshot" [ref=e269]
+                    - generic [ref=e270]:
+                      - generic [ref=e271]:
+                        - generic [ref=e272]: 顯示與下列指標相關的稽核項目：
+                        - radio "All" [checked] [ref=e273]
+                        - generic [ref=e274] [cursor=pointer]: All
+                        - radio "FCP" [ref=e275]
+                        - generic "First Contentful Paint" [ref=e276] [cursor=pointer]: FCP
+                        - radio "LCP" [ref=e277]
+                        - generic "Largest Contentful Paint" [ref=e278] [cursor=pointer]: LCP
+                        - radio "TBT" [ref=e279]
+                        - generic "Total Blocking Time" [ref=e280] [cursor=pointer]: TBT
+                        - radio "CLS" [ref=e281]
+                        - generic "Cumulative Layout Shift" [ref=e282] [cursor=pointer]: CLS
+                      - generic [ref=e283]:
+                        - generic [ref=e284]: 深入分析
+                        - group [ref=e286]:
+                          - generic "提升圖片傳送效能 —預估可省下 109 KiB" [ref=e287] [cursor=pointer]:
+                            - generic [ref=e290]:
+                              - generic [ref=e291]: 提升圖片傳送效能
+                              - text: —預估可省下 109 KiB
+                        - group [ref=e298]:
+                          - generic "版面配置位移主因" [ref=e299] [cursor=pointer]
+                        - group [ref=e310]:
+                          - generic "強制自動重排" [ref=e311] [cursor=pointer]
+                        - group [ref=e322]:
+                          - generic "網路依附元件樹狀結構" [ref=e323] [cursor=pointer]
+                        - group [ref=e334]:
+                          - generic "使用有效的快取生命週期 —預估可省下 5 KiB" [ref=e335] [cursor=pointer]:
+                            - generic [ref=e338]:
+                              - generic [ref=e339]: 使用有效的快取生命週期
+                              - text: —預估可省下 5 KiB
+                        - group [ref=e346]:
+                          - generic "最佳化 DOM 大小" [ref=e347] [cursor=pointer]
+                        - group [ref=e358]:
+                          - generic "LCP 細目" [ref=e359] [cursor=pointer]
+                        - group [ref=e370]:
+                          - generic "第三方" [ref=e371] [cursor=pointer]
+                        - generic [ref=e381]:
+                          - text: 你也可以前往 Chrome 開發人員工具的「效能」面板查看這些深入分析結果。只要
+                          - link "記錄追蹤記錄" [ref=e382] [cursor=pointer]:
+                            - /url: https://developer.chrome.com/docs/devtools/performance/reference?utm_source=lighthouse&utm_medium=lr
+                          - text: ，即可查看更詳細的資訊。
+                      - generic [ref=e383]:
+                        - generic [ref=e384]: 診斷
+                        - group [ref=e386]:
+                          - generic "減少無用的 JavaScript —預估可省下 65 KiB" [ref=e387] [cursor=pointer]:
+                            - generic [ref=e390]:
+                              - generic [ref=e391]: 減少無用的 JavaScript
+                              - text: —預估可省下 65 KiB
+                        - group [ref=e398]:
+                          - generic "避免使用非合成的動畫 —找到 39 個動畫元素" [ref=e399] [cursor=pointer]:
+                            - generic [ref=e402]:
+                              - generic [ref=e403]: 避免使用非合成的動畫
+                              - text: —找到 39 個動畫元素
+                        - group [ref=e410]:
+                          - generic "避免長時間在主執行緒上執行的工作 —找到 3 項長時間執行的工作" [ref=e411] [cursor=pointer]:
+                            - generic [ref=e414]:
+                              - generic [ref=e415]: 避免長時間在主執行緒上執行的工作
+                              - text: —找到 3 項長時間執行的工作
+                        - generic [ref=e421]:
+                          - text: 進一步瞭解應用程式的效能。這些數字不會
+                          - link "直接影響" [ref=e422] [cursor=pointer]:
+                            - /url: https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/?utm_source=lighthouse&utm_medium=lr
+                          - text: 「效能」分數。
+                      - group [ref=e424]:
+                        - generic "通過稽核項目 (16) 顯示" [ref=e425] [cursor=pointer]:
+                          - generic [ref=e426]:
+                            - generic [ref=e427]: 通過稽核項目 (16)
+                            - generic [ref=e428]: 顯示
+                        - text: — — —
+                  - generic [ref=e430]:
+                    - generic [ref=e431]:
+                      - heading "95 無障礙功能" [level=2] [ref=e432]:
+                        - generic [ref=e433]:
+                          - generic [ref=e438]: "95"
+                          - generic [ref=e439]: 無障礙功能
+                      - generic [ref=e441]:
+                        - text: 這些檢查可找出
+                        - link "網頁應用程式無障礙設計值得改善之處" [ref=e442] [cursor=pointer]:
+                          - /url: https://developer.chrome.com/docs/lighthouse/accessibility/?utm_source=lighthouse&utm_medium=lr
+                        - text: 。自動偵測功能只能偵測出部分問題，而且無法保證網頁應用程式的無障礙程度，因此建議一併使用
+                        - link "手動測試" [ref=e443] [cursor=pointer]:
+                          - /url: https://web.dev/articles/how-to-review?utm_source=lighthouse&utm_medium=lr
+                        - text: 。
+                    - generic [ref=e444]:
+                      - generic [ref=e445]:
+                        - generic [ref=e446]: 對比
+                        - group [ref=e448]:
+                          - generic "背景和前景顏色沒有足夠的對比度。" [ref=e449] [cursor=pointer]
+                        - generic [ref=e459]: 這些稽核建議有助於提高內容的易讀性。
+                      - generic [ref=e460]:
+                        - generic [ref=e461]: 最佳做法
+                        - group [ref=e463]:
+                          - generic "文件缺少主要位置標記。" [ref=e464] [cursor=pointer]
+                        - group [ref=e475]:
+                          - generic "相同的連結用途相同。" [ref=e476] [cursor=pointer]
+                        - generic [ref=e486]: 這些稽核項目會提供常見的無障礙功能最佳做法。
+                    - generic [ref=e487]:
+                      - group [ref=e488]:
+                        - generic "其他手動檢查項目 (10) 顯示" [ref=e489] [cursor=pointer]:
+                          - generic [ref=e490]:
+                            - generic [ref=e491]: 其他手動檢查項目 (10)
+                            - generic [ref=e492]: 顯示
+                      - generic [ref=e493]:
+                        - text: 這些稽核項目會檢查自動化測試工具未涵蓋的區域。詳情請參閱
+                        - link "無障礙功能審查的執行指南" [ref=e494] [cursor=pointer]:
+                          - /url: https://web.dev/articles/how-to-review?utm_source=lighthouse&utm_medium=lr
+                        - text: 。
+                    - group [ref=e496]:
+                      - generic "通過稽核項目 (23) 顯示" [ref=e497] [cursor=pointer]:
+                        - generic [ref=e498]:
+                          - generic [ref=e499]: 通過稽核項目 (23)
+                          - generic [ref=e500]: 顯示
+                    - group [ref=e502]:
+                      - generic "不適用 (37) 顯示" [ref=e503] [cursor=pointer]:
+                        - generic [ref=e504]:
+                          - generic [ref=e505]: 不適用 (37)
+                          - generic [ref=e506]: 顯示
+                  - generic [ref=e508]:
+                    - heading "100 最佳做法" [level=2] [ref=e510]:
+                      - generic [ref=e511]:
+                        - generic [ref=e516]: "100"
+                        - generic [ref=e517]: 最佳做法
+                    - generic [ref=e518]:
+                      - generic [ref=e519]:
+                        - generic [ref=e520]: 信任與安全性
+                        - group [ref=e522]:
+                          - generic "確保 CSP 能有效防範 XSS 攻擊" [ref=e523] [cursor=pointer]
+                        - group [ref=e534]:
+                          - generic "使用安全強度高的 HTTP 嚴格傳輸安全性政策" [ref=e535] [cursor=pointer]
+                        - group [ref=e546]:
+                          - generic "使用 COOP 確保正確的來源隔離" [ref=e547] [cursor=pointer]
+                        - group [ref=e558]:
+                          - generic "使用 XFO 或 CSP 防範 Clickjacking (點擊劫持) 攻擊" [ref=e559] [cursor=pointer]
+                        - group [ref=e570]:
+                          - generic "使用 Trusted Types 減輕 DOM 型 XSS 攻擊的影響" [ref=e571] [cursor=pointer]
+                      - generic [ref=e581]:
+                        - generic [ref=e582]: 瀏覽器相容性
+                        - group [ref=e584]:
+                          - generic "Baseline 功能" [ref=e585] [cursor=pointer]
+                    - group [ref=e596]:
+                      - generic "通過稽核項目 (13) 顯示" [ref=e597] [cursor=pointer]:
+                        - generic [ref=e598]:
+                          - generic [ref=e599]: 通過稽核項目 (13)
+                          - generic [ref=e600]: 顯示
+                    - group [ref=e602]:
+                      - generic "不適用 (2) 顯示" [ref=e603] [cursor=pointer]:
+                        - generic [ref=e604]:
+                          - generic [ref=e605]: 不適用 (2)
+                          - generic [ref=e606]: 顯示
+                  - generic [ref=e608]:
+                    - generic [ref=e609]:
+                      - heading "100 搜尋引擎最佳化 (SEO)" [level=2] [ref=e610]:
+                        - generic [ref=e611]:
+                          - generic [ref=e616]: "100"
+                          - generic [ref=e617]: 搜尋引擎最佳化 (SEO)
+                      - generic [ref=e619]:
+                        - text: 這些檢查項目可確保你的網頁採用基本的搜尋引擎最佳化建議。請注意，Lighthouse 這裡未列入評分的其他因素還有很多，這些因素也可能會影響你的網頁搜尋結果排名，包括
+                        - link "網站體驗核心指標" [ref=e620] [cursor=pointer]:
+                          - /url: https://web.dev/explore/vitals?utm_source=lighthouse&utm_medium=lr
+                        - text: 的成效。
+                        - link "進一步瞭解 Google 搜尋基礎入門" [ref=e621] [cursor=pointer]:
+                          - /url: https://support.google.com/webmasters/answer/35769
+                        - text: 。
+                    - generic [ref=e622]:
+                      - group [ref=e623]:
+                        - generic "其他手動檢查項目 (1) 隱藏" [ref=e624] [cursor=pointer]:
+                          - generic [ref=e625]:
+                            - generic [ref=e626]: 其他手動檢查項目 (1)
+                            - generic [ref=e627]: 隱藏
+                        - group [ref=e630]:
+                          - generic "結構化資料有效" [ref=e631] [cursor=pointer]
+                      - generic [ref=e641]: 在您的網站上執行這些額外的驗證工具，以檢查其他 SEO 最佳做法。
+                    - group [ref=e643]:
+                      - generic "通過稽核項目 (10) 顯示" [ref=e644] [cursor=pointer]:
+                        - generic [ref=e645]:
+                          - generic [ref=e646]: 通過稽核項目 (10)
+                          - generic [ref=e647]: 顯示
+                  - generic [ref=e649]:
+                    - generic [ref=e650]:
+                      - heading "1/3 代理瀏覽" [level=2] [ref=e651]:
+                        - generic [ref=e652]:
+                          - generic [ref=e653]: 1/3
+                          - generic [ref=e657]: 代理瀏覽
+                      - generic [ref=e659]:
+                        - text: 這些檢查旨在確保網站品質優良並
+                        - link "適合 AI 代理瀏覽" [ref=e660] [cursor=pointer]:
+                          - /url: https://goo.gle/lighthouse-agentic-web
+                        - text: ，同時驗證 WebMCP 整合正確性。這個類別仍在開發階段，可能隨時會有變動。
+                    - generic [ref=e661]:
+                      - group [ref=e663]:
+                        - generic "Cumulative Layout Shift —0.282" [ref=e664] [cursor=pointer]:
+                          - generic [ref=e667]:
+                            - generic [ref=e668]: Cumulative Layout Shift
+                            - text: —0.282
+                      - generic [ref=e674]:
+                        - generic [ref=e675]: 代理可存取性
+                        - group [ref=e677]:
+                          - generic "llms.txt 不符合建議" [ref=e678] [cursor=pointer]
+                        - generic [ref=e688]: 這些稽核項目點出提高網站 AI 代理可存取性的最佳做法。
+                    - group [ref=e690]:
+                      - generic "通過稽核項目 (1) 顯示" [ref=e691] [cursor=pointer]:
+                        - generic [ref=e692]:
+                          - generic [ref=e693]: 通過稽核項目 (1)
+                          - generic [ref=e694]: 顯示
+                      - text: —
+                    - group [ref=e696]:
+                      - generic "不適用 (3) 顯示" [ref=e697] [cursor=pointer]:
+                        - generic [ref=e698]:
+                          - generic [ref=e699]: 不適用 (3)
+                          - generic [ref=e700]: 顯示
+      - text: — — — — — — — — — —
+  - contentinfo [ref=e52]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 前往 PageSpeed Insights 查看更多資訊
+          - link "最新消息" [ref=e58] [cursor=pointer]:
+            - /url: https://developers.google.com/speed/docs/insights/release_notes
+          - link "說明文件" [ref=e60] [cursor=pointer]:
+            - /url: https://developers.google.com/speed/docs/insights/v5/about
+          - link "瞭解網路效能" [ref=e62] [cursor=pointer]:
+            - /url: https://developers.google.com/speed
+          - link "在 Stack Overflow 上提出問題" [ref=e64] [cursor=pointer]:
+            - /url: https://stackoverflow.com/questions/tagged/pagespeed-insights
+          - link "郵寄清單" [ref=e66] [cursor=pointer]:
+            - /url: https://groups.google.com/g/pagespeed-insights-discuss
+        - generic [ref=e67]:
+          - generic [ref=e68]: 相關內容
+          - link "最新動態" [ref=e70] [cursor=pointer]:
+            - /url: https://developer.chrome.com/blog
+          - link "網站基礎知識" [ref=e72] [cursor=pointer]:
+            - /url: https://developers.google.com/focus/web-development
+          - link "個案研究" [ref=e74] [cursor=pointer]:
+            - /url: https://web.dev/case-studies
+          - link "Podcast" [ref=e76] [cursor=pointer]:
+            - /url: https://web.dev/shows
+        - generic [ref=e77]:
+          - generic [ref=e78]: 聯絡方式
+          - link "Twitter" [ref=e80] [cursor=pointer]:
+            - /url: https://twitter.com/ChromiumDev
+          - link "YouTube" [ref=e82] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/ChromeDevelopers
+      - generic [ref=e83]:
+        - link [ref=e84] [cursor=pointer]:
+          - /url: https://developers.google.com/
+          - img "Google Developers Logo" [ref=e85]
+        - link "Chrome" [ref=e86] [cursor=pointer]:
+          - /url: https://developer.chrome.com/
+        - link "Firebase" [ref=e87] [cursor=pointer]:
+          - /url: https://firebase.google.com/
+        - link "所有產品" [ref=e88] [cursor=pointer]:
+          - /url: https://developers.google.com/products/
+      - generic [ref=e89]:
+        - link "條款與隱私權政策" [ref=e91] [cursor=pointer]:
+          - /url: https://policies.google.com/
+        - generic [ref=e92]:
+          - text: 詳情請參閱
+          - link "Google Developers 網站政策" [ref=e93] [cursor=pointer]:
+            - /url: https://developers.google.com/terms/site-policies
+          - text: 。

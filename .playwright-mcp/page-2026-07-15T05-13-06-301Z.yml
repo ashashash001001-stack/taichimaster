@@ -1,0 +1,289 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]: 林師傅
+      - button "開啟手機選單" [expanded] [active] [ref=e445] [cursor=pointer]
+  - banner [ref=e15]:
+    - img "林燦平師傅於油塘教授太極拳班上課實況" [ref=e18]
+    - generic [ref=e21]:
+      - generic [ref=e22]: 林燦平太極學會 主辦
+      - heading "油塘太極班現正招生 歡迎任何年齡及初學者" [level=1] [ref=e23]: 油塘太極班現正招生歡迎任何年齡及初學者
+      - paragraph [ref=e24]: 教授拳、刀、劍、扇、鞭桿。 位於油塘，服務觀塘、將軍澳及東九龍區學員。 歡迎到場參觀或致電查詢。
+      - generic [ref=e25]:
+        - link "致電 6098 5742" [ref=e26] [cursor=pointer]:
+          - /url: tel:60985742
+        - link "查看上課時間" [ref=e29] [cursor=pointer]:
+          - /url: "#schedule"
+  - generic [ref=e32]:
+    - generic [ref=e33]:
+      - img "林燦平師傅示範楊氏太極拳" [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e38]: 25年
+        - generic [ref=e39]: 學習經驗
+    - generic [ref=e40]:
+      - heading "關於 林燦平 師傅" [level=2] [ref=e41]
+      - paragraph [ref=e43]: 大家好，我是林燦平。致力於推廣太極運動，成立「林燦平太極學會」。 多年來，我們歡迎不同年齡的朋友加入，無論您是完全沒有基礎的初學者，還是希望深造的習武之人，我們都有適合您的課程。
+      - paragraph [ref=e44]: 我們的教學內容豐富，涵蓋拳術及各類器械（刀、劍、扇、鞭桿）， 旨在透過傳統武術，幫助學員強身健體，修身養性。 本會位於油塘區，方便觀塘、將軍澳及東九龍居民參與。
+      - generic [ref=e45]:
+        - generic [ref=e46]: 歡迎初學者參加
+        - generic [ref=e53]: 多種類課程選擇
+        - generic [ref=e58]: 可即場報名
+  - generic [ref=e65]:
+    - generic [ref=e66]:
+      - generic [ref=e67]: "12"
+      - generic [ref=e68]: 年教學經驗
+    - generic [ref=e69]:
+      - generic [ref=e70]: 200+
+      - generic [ref=e71]: 學員人數
+    - generic [ref=e72]:
+      - generic [ref=e73]: "7"
+      - generic [ref=e74]: 天每週課程
+    - generic [ref=e75]:
+      - generic [ref=e76]: 5⭐
+      - generic [ref=e77]: 學員滿意度
+  - generic [ref=e79]:
+    - heading "太極拳與器械的益處" [level=2] [ref=e80]
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]: 💪
+        - heading "全面鍛鍊" [level=3] [ref=e84]
+        - paragraph [ref=e85]:
+          - text: 除拳術外，透過練習刀、劍、扇等器械，能更全面地鍛鍊身體協調性與專注力。適合辦公室人士改善肩頸僵硬。
+          - link "了解詳情 →" [ref=e86] [cursor=pointer]:
+            - /url: articles/tai-chi-neck-pain-relief.html
+      - generic [ref=e87]:
+        - generic [ref=e88]: 🧘
+        - heading "舒緩壓力" [level=3] [ref=e89]
+        - paragraph [ref=e90]:
+          - text: 配合呼吸法，能有效降低皮質醇水平，改善焦慮與失眠，讓大腦徹底放鬆。對長期伏案工作引起的腰背痛有顯著幫助。
+          - link "科學實證 →" [ref=e91] [cursor=pointer]:
+            - /url: articles/tai-chi-lower-back-pain.html
+      - generic [ref=e92]:
+        - generic [ref=e93]: 🔋
+        - heading "適合任何年齡" [level=3] [ref=e94]
+        - paragraph [ref=e95]:
+          - text: 課程設計循序漸進，無論男女老幼，有無經驗，均可輕鬆入門。長者練習可強化下肢力量，預防跌倒。
+          - link "研究數據 →" [ref=e96] [cursor=pointer]:
+            - /url: articles/tai-chi-fall-prevention.html
+  - generic [ref=e98]:
+    - generic [ref=e99]:
+      - heading "本會設有多種類課程" [level=2] [ref=e100]
+      - paragraph [ref=e101]: 教授項目包括：拳、刀、劍、扇、鞭桿
+    - generic [ref=e102]:
+      - generic [ref=e103] [cursor=pointer]:
+        - generic [ref=e104]:
+          - img "油塘太極拳入門班上課環境" [ref=e106]
+          - generic [ref=e107]: 適合初學者
+        - generic [ref=e108]:
+          - heading "太極拳班" [level=3] [ref=e109]
+          - paragraph [ref=e110]: 打好根基，修身養性
+          - list [ref=e111]:
+            - listitem [ref=e112]: 基本樁功與步法
+            - listitem [ref=e115]: 傳統太極拳套路
+            - listitem [ref=e118]: 適合任何年齡人士
+      - generic [ref=e121] [cursor=pointer]:
+        - img "油塘太極器械班學員上課實況" [ref=e124]
+        - generic [ref=e125]:
+          - heading "太極器械班" [level=3] [ref=e126]
+          - paragraph [ref=e127]: 剛柔並濟，豐富多變
+          - list [ref=e128]:
+            - listitem [ref=e129]: 太極刀、太極劍
+            - listitem [ref=e132]: 太極扇
+            - listitem [ref=e135]: 鞭桿
+      - generic [ref=e138] [cursor=pointer]:
+        - img "林燦平師傅示範太極劍與太極扇" [ref=e141]
+        - generic [ref=e142]:
+          - heading "報名與查詢" [level=3] [ref=e143]
+          - paragraph [ref=e144]: 隨時歡迎加入
+          - list [ref=e145]:
+            - listitem [ref=e146]: 歡迎隨時親臨觀課，滿意再報名！
+            - listitem [ref=e149]: 零基礎可旁聽，無需預約
+            - listitem [ref=e152]: 歡迎致電或 WhatsApp 查詢詳情
+          - paragraph [ref=e156]: 電話：6098 5742
+  - generic [ref=e158]:
+    - generic [ref=e159]:
+      - heading "收費詳情" [level=2] [ref=e160]
+      - paragraph [ref=e161]: 透明收費，無隱藏費用
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - generic [ref=e164]: 🥋
+        - heading "太極拳班" [level=3] [ref=e165]
+        - paragraph [ref=e166]: 基本拳術課程
+        - generic [ref=e167]: 歡迎查詢
+        - paragraph [ref=e168]: 按月收費，詳情請致電或 WhatsApp
+        - link "查詢收費" [ref=e169] [cursor=pointer]:
+          - /url: https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E6%8B%B3%E7%8F%AD%E6%94%B6%E8%B2%BB%E3%80%82
+      - generic [ref=e170]:
+        - generic [ref=e171]: ⚔️
+        - heading "太極器械班" [level=3] [ref=e172]
+        - paragraph [ref=e173]: 刀、劍、扇、鞭桿
+        - generic [ref=e174]: 歡迎查詢
+        - paragraph [ref=e175]: 按月收費，詳情請致電或 WhatsApp
+        - link "查詢收費" [ref=e176] [cursor=pointer]:
+          - /url: https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%A4%AA%E6%A5%B5%E5%99%A8%E6%A2%B0%E7%8F%AD%E6%94%B6%E8%B2%BB%E3%80%82
+    - paragraph [ref=e178]: ✅ 可即場報名 ✅ 歡迎隨時觀課 ✅ 滿意才報名
+  - generic [ref=e181]:
+    - generic [ref=e182]:
+      - heading "上課地點與時間" [level=2] [ref=e183]
+      - generic [ref=e184]:
+        - button "全部" [ref=e185] [cursor=pointer]
+        - button "早上班" [ref=e186] [cursor=pointer]
+        - button "晚上班" [ref=e187] [cursor=pointer]
+      - paragraph [ref=e188]: 歡迎隨時親臨觀課，滿意再報名！
+      - paragraph [ref=e189]: 零基礎亦可旁聽，無需預約。
+      - generic [ref=e196]:
+        - heading "小童群益會前空地" [level=3] [ref=e197]
+        - paragraph [ref=e198]: 環境開揚舒適，適合練習。
+        - generic [ref=e199]:
+          - generic [ref=e200]: 逢星期一、三、五、六、日
+          - generic [ref=e204]: 上午 09:00 - 下午 01:00
+        - generic [ref=e210]:
+          - generic [ref=e211]: 逢星期二、四
+          - generic [ref=e215]:
+            - generic [ref=e216]: 上午 10:00 - 下午 01:00
+            - generic [ref=e221]: 晚上 07:00 - 晚上 10:00
+        - generic [ref=e226]:
+          - generic [ref=e227]: 逢星期一至日
+          - generic [ref=e231]: 晚上 07:00 - 晚上 10:00
+    - button "點擊載入 Google 地圖" [ref=e238] [cursor=pointer]:
+      - generic:
+        - img "上課地點：小童群益會前空地（點擊載入地圖）"
+      - generic [ref=e239]: 點擊載入地圖
+  - generic [ref=e245]:
+    - heading "學員真實分享" [level=2] [ref=e246]
+    - generic [ref=e247]:
+      - generic [ref=e248]:
+        - generic [ref=e249]: "\""
+        - paragraph [ref=e250]: 以前長期坐寫字樓，腰背好痛。跟林師傅學左三個月，學識放鬆膊頭，背痛真係好左好多，夜晚都好訓左！
+        - generic [ref=e251]:
+          - generic [ref=e252]: L
+          - generic [ref=e253]:
+            - heading "林小姐 (35歲)" [level=3] [ref=e254]
+            - paragraph [ref=e255]: 會計師 • 學員
+      - generic [ref=e267]:
+        - generic [ref=e268]: "\""
+        - paragraph [ref=e269]: 師傅教得好細心，每一個動作都會解釋原理，除左拳仲學識用扇，非常好玩又實用！
+        - generic [ref=e270]:
+          - generic [ref=e271]: K
+          - generic [ref=e272]:
+            - heading "張先生 (62歲)" [level=3] [ref=e273]
+            - paragraph [ref=e274]: 退休人士 • 學員
+  - generic [ref=e306]:
+    - generic [ref=e307]:
+      - heading "常見問題" [level=2] [ref=e308]
+      - paragraph [ref=e309]: 點擊展開答案，了解更多詳情
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - button "太極拳適合什麼年齡的人學習？" [expanded] [ref=e312] [cursor=pointer]
+        - region [ref=e316]:
+          - paragraph [ref=e317]:
+            - text: 太極拳適合
+            - strong [ref=e318]: 任何年齡
+            - text: 人士學習，從兒童到長者皆可練習。哈佛大學醫學院研究指出，太極拳可改善長者平衡能力達
+            - strong [ref=e319]: 45%
+            - text: ，降低跌倒風險。同時，NIH 研究證實太極拳對慢性病患者的心肺功能有顯著改善。林燦平太極學會設有早班及晚班，適合不同年齡和作息人士。
+          - link "閱讀更多" [ref=e320] [cursor=pointer]:
+            - /url: articles/tai-chi-age-guide.html
+      - generic [ref=e323]:
+        - button "油塘太極班如何報名？" [ref=e324] [cursor=pointer]
+        - region [ref=e328]:
+          - paragraph [ref=e329]:
+            - text: 歡迎直接在上課時間到
+            - strong [ref=e330]: 小童群益會前空地
+            - text: 即場報名，或致電/WhatsApp 6098 5742 查詢。
+            - strong [ref=e331]: 首堂可免費試玩
+            - text: ，穿著舒適運動服即可，無需預先購買任何裝備。本會設有早班（09:00-13:00）及晚班（19:00-22:00），每周7天均有課程，彈性安排。
+          - link "閱讀更多" [ref=e332] [cursor=pointer]:
+            - /url: articles/how-to-choose-tai-chi-class.html
+      - generic [ref=e335]:
+        - button "太極拳對肩頸痛、腰背痛有幫助嗎？" [ref=e336] [cursor=pointer]
+        - region [ref=e340]:
+          - paragraph [ref=e341]:
+            - text: 太極拳透過緩慢柔和的動作配合呼吸法，能有效放鬆肩頸肌肉。NIH 研究顯示，每周練習3次太極拳、持續12周後，慢性頸痛患者的疼痛指數平均降低
+            - strong [ref=e342]: 45%
+            - text: 。同時，太極拳的「沉肩墜肘」要求能改善圓肩駝背問題，從根本上減少肩頸壓力。許多辦公室學員在練習1-2個月後反映痛症明顯減輕，睡眠質素亦有改善。
+          - link "閱讀更多" [ref=e343] [cursor=pointer]:
+            - /url: articles/tai-chi-neck-pain-relief.html
+      - generic [ref=e346]:
+        - button "太極班教授什麼內容？" [ref=e347] [cursor=pointer]
+        - region [ref=e351]:
+          - paragraph [ref=e352]:
+            - text: 本會教授
+            - strong [ref=e353]: 太極拳、太極刀、太極劍、太極扇及鞭桿
+            - text: 。由基本樁功步法開始，循序漸進學習傳統楊氏太極拳套路。拳術班打好根基後可進階至器械班，學習刀、劍、扇、鞭桿等多種器械。全套課程設計涵蓋柔韌性訓練、平衡訓練、呼吸調節及放鬆技巧。
+          - link "閱讀更多" [ref=e354] [cursor=pointer]:
+            - /url: articles/tai-chi-beginner-guide.html
+      - generic [ref=e357]:
+        - button "觀塘、將軍澳居民方便來上課嗎？" [ref=e358] [cursor=pointer]
+        - region [ref=e362]:
+          - paragraph [ref=e363]:
+            - text: 非常適合！本會位於油塘，從觀塘出發乘港鐵僅需
+            - strong [ref=e364]: 5分鐘
+            - text: （油塘站A出口），從將軍澳出發約10分鐘。上課地點在小童群益會賽馬會油塘青少年綜合服務中心前空地，鄰近油塘大本營商場，環境開揚舒適。附近有停車場，駕車人士同樣方便。
+          - link "閱讀更多" [ref=e365] [cursor=pointer]:
+            - /url: kwun-tong.html
+  - generic [ref=e369]:
+    - generic [ref=e370]:
+      - heading "服務地區" [level=2] [ref=e371]
+      - paragraph [ref=e372]: 歡迎油塘及東九龍各區學員參加
+    - generic [ref=e373]:
+      - link "觀塘太極班" [ref=e374] [cursor=pointer]:
+        - /url: kwun-tong.html
+      - link "藍田太極班" [ref=e375] [cursor=pointer]:
+        - /url: lam-tin.html
+      - link "將軍澳太極班" [ref=e376] [cursor=pointer]:
+        - /url: tseung-kwan-o.html
+      - link "九龍城太極班" [ref=e377] [cursor=pointer]:
+        - /url: kowloon-city.html
+      - link "黃大仙太極班" [ref=e378] [cursor=pointer]:
+        - /url: wong-tai-sin.html
+  - generic [ref=e380]:
+    - generic [ref=e381]:
+      - heading "養生專欄精選" [level=2] [ref=e382]
+      - paragraph [ref=e383]: 100篇太極健康知識文章，助你深入了解太極拳的益處
+    - generic [ref=e384]:
+      - link "太極入門 太極拳入門指南：初學者必讀的10個基本概念 從零開始學習太極拳，了解基本步法、呼吸法、身型要求等核心概念。 閱讀更多" [ref=e385] [cursor=pointer]:
+        - /url: articles/tai-chi-beginner-guide.html
+        - generic [ref=e386]: 太極入門
+        - heading "太極拳入門指南：初學者必讀的10個基本概念" [level=3] [ref=e387]
+        - paragraph [ref=e388]: 從零開始學習太極拳，了解基本步法、呼吸法、身型要求等核心概念。
+        - generic [ref=e389]: 閱讀更多
+      - link "肩頸腰背 太極拳如何舒緩肩頸痛？辦公室人士的救星 長期使用電腦導致肩頸僵硬疼痛？太極拳能有效舒緩肩頸痛。 閱讀更多" [ref=e392] [cursor=pointer]:
+        - /url: articles/tai-chi-neck-pain-relief.html
+        - generic [ref=e393]: 肩頸腰背
+        - heading "太極拳如何舒緩肩頸痛？辦公室人士的救星" [level=3] [ref=e394]
+        - paragraph [ref=e395]: 長期使用電腦導致肩頸僵硬疼痛？太極拳能有效舒緩肩頸痛。
+        - generic [ref=e396]: 閱讀更多
+      - link "長者健康 太極拳預防長者跌倒：科學證實的有效方法 跌倒是長者受傷的主要原因。太極拳能降低跌倒風險達45%。 閱讀更多" [ref=e399] [cursor=pointer]:
+        - /url: articles/tai-chi-fall-prevention.html
+        - generic [ref=e400]: 長者健康
+        - heading "太極拳預防長者跌倒：科學證實的有效方法" [level=3] [ref=e401]
+        - paragraph [ref=e402]: 跌倒是長者受傷的主要原因。太極拳能降低跌倒風險達45%。
+        - generic [ref=e403]: 閱讀更多
+    - link "查看更多文章" [ref=e407] [cursor=pointer]:
+      - /url: blog.html
+  - contentinfo [ref=e410]:
+    - generic [ref=e411]:
+      - generic [ref=e412]:
+        - generic [ref=e413]:
+          - heading "準備好開始您的太極之旅嗎？" [level=2] [ref=e414]
+          - paragraph [ref=e415]: 林燦平太極學會 主辦 歡迎到場或致電查詢
+          - generic [ref=e416]:
+            - generic [ref=e417]: 6098 5742
+            - generic [ref=e421]: "WhatsApp: 6098 5742"
+            - generic [ref=e425]: 地點：小童群益會前空地
+        - generic [ref=e430]:
+          - heading "查詢表格" [level=3] [ref=e431]
+          - generic [ref=e432]:
+            - generic [ref=e433]:
+              - generic [ref=e434]: 姓名
+              - textbox "您的稱呼" [ref=e435]
+            - generic [ref=e436]:
+              - generic [ref=e437]: 聯絡電話
+              - textbox "電話號碼" [ref=e438]
+            - button "提交查詢" [ref=e439] [cursor=pointer]
+      - generic [ref=e440]: © 2026 林燦平太極學會. All Rights Reserved.
+  - link "聯絡我們 WhatsApp" [ref=e441] [cursor=pointer]:
+    - /url: https://wa.me/85260985742?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%9E%97%E5%B8%AB%E5%82%85%EF%BC%81%E6%88%91%E5%9C%A8%E7%B6%B2%E9%A0%81%E7%9C%8B%E5%88%B0%E5%A4%AA%E6%A5%B5%E7%8F%AD%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%9B%B4%E5%A4%9A%E8%A9%B3%E6%83%85%EF%BC%88%E5%A6%82%EF%BC%9A%E6%94%B6%E8%B2%BB%E3%80%81%E9%81%A9%E5%90%88%E7%A8%8B%E5%BA%A6%EF%BC%89%E3%80%82
+    - generic: 查詢 / 報名
+  - button "返回頂部"
