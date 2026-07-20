@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script>
+    <script defer>
     (function(){
         var d=window.location.origin+window.location.pathname;
         var b=window.location.origin;
@@ -191,8 +191,8 @@
     // Initial render
     renderArticles();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+        <!-- Delay GTM to reduce unused JS impact on LCP -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.requestIdleCallback){window.requestIdleCallback(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);},{timeout:2000});}else{window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);});}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 
 </body>
 </html>
