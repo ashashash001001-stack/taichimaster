@@ -212,7 +212,6 @@ function createIcon(name, attrs = {}) {
 function initIcons() {
   document.querySelectorAll('[data-lucide]').forEach(el => {
     const name = el.getAttribute('data-lucide');
-    const classes = el.className;
     // Preserve ALL original attributes (id, class, style, etc.)
     const attrs = {};
     for (const attr of el.attributes) {
@@ -221,6 +220,15 @@ function initIcons() {
       }
     }
     if (!attrs.class) attrs.class = 'lucide';
+    // Fix CLS: copy computed dimensions to prevent layout shift when <i> is replaced by <svg>
+    // The <i> element had CSS dimensions (e.g. 1.25em) that disappear after replacement
+    const rect = el.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      attrs.width = String(Math.round(rect.width));
+      attrs.height = String(Math.round(rect.height));
+    }
+    // Mark the SVG so CSS can set display:inline-block (lost when <i> is replaced)
+    attrs['data-icon'] = '';
     const html = createIcon(name, attrs);
     el.outerHTML = html;
   });
