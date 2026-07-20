@@ -209,10 +209,16 @@ function createIcon(name, attrs = {}) {
 }
 
 // Replace all [data-lucide] elements with inline SVG
+// Phase 1: batch-read all dimensions to avoid layout thrashing
+// Phase 2: replace all elements in a single pass
 function initIcons() {
-  document.querySelectorAll('[data-lucide]').forEach(el => {
+  const els = document.querySelectorAll('[data-lucide]');
+  if (!els.length) return;
+
+  // Phase 1: read all geometry before any DOM writes
+  const batch = [];
+  els.forEach(el => {
     const name = el.getAttribute('data-lucide');
-    // Preserve ALL original attributes (id, class, style, etc.)
     const attrs = {};
     for (const attr of el.attributes) {
       if (attr.name !== 'data-lucide') {
@@ -220,14 +226,16 @@ function initIcons() {
       }
     }
     if (!attrs.class) attrs.class = 'lucide';
-    // Fix CLS: copy computed dimensions to prevent layout shift when <i> is replaced by <svg>
-    // The <i> element had CSS dimensions (e.g. 1.25em) that disappear after replacement
     const rect = el.getBoundingClientRect();
-    if (rect.width > 0 && rect.height > 0) {
-      attrs.width = String(Math.round(rect.width));
-      attrs.height = String(Math.round(rect.height));
+    batch.push({ el, name, attrs, width: rect.width, height: rect.height });
+  });
+
+  // Phase 2: write all replacements (single layout recalc after all reads)
+  batch.forEach(({ el, name, attrs, width, height }) => {
+    if (width > 0 && height > 0) {
+      attrs.width = String(Math.round(width));
+      attrs.height = String(Math.round(height));
     }
-    // Mark the SVG so CSS can set display:inline-block (lost when <i> is replaced)
     attrs['data-icon'] = '';
     const html = createIcon(name, attrs);
     el.outerHTML = html;
