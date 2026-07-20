@@ -115,6 +115,27 @@ def process_file(filepath):
             changes.append('fixed_css_preload')
             content = new_content
 
+    new_content = re.sub(
+        r'transition-all\s+duration-\d+\s+[\w-]+',
+        'transition-max-width',
+        content
+    )
+    if new_content != content:
+        changes.append('fixed_transition_all')
+        content = new_content
+
+    if filepath.suffix == '.html' and '<style>' in content:
+        if '.transition-max-width' not in content:
+            new_content = re.sub(
+                r'(<style[^>]*>)(.*?)(</style>)',
+                r'\1\2\n        .transition-max-width{transition-property:max-width;transition-duration:300ms;transition-timing-function:ease-in-out}\3',
+                content,
+                flags=re.DOTALL
+            )
+            if new_content != content:
+                changes.append('added_transition_max_width_css')
+                content = new_content
+
     if content != original:
         if not DRY_RUN:
             filepath.write_text(content, encoding='utf-8')
@@ -130,15 +151,12 @@ def main():
         print(status)
         total += len(ch)
 
-    # Also process generator Python files
+    # Also skip generator Python files - their embedded HTML templates would be
+    # corrupted by HTML-processing patterns. Generators are not deployed; their
+    # OUTPUT (the HTML files in articles/) is what gets deployed and optimized.
     for py_file in [Path('generate_blog.py'), Path('gen_regions.py')]:
         if py_file.exists():
-            ch = process_file(py_file)
-            if ch:
-                print(f"✅ {py_file}: {', '.join(ch)}")
-                total += 1
-            else:
-                print(f"⏭️  {py_file}: no changes")
+            print(f"⏭️  {py_file}: skipped (not a deployed file)")
 
     print(f"\n{'[DRY RUN] ' if DRY_RUN else ''}{total} changes applied")
 
