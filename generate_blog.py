@@ -850,7 +850,8 @@ def generate_article_html(article, all_articles):
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript>
+    <noscript><link rel="preload" href="../css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../css/tailwind.css"></noscript></noscript>
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; cursor: pointer; transition: all 0.2s; }}
@@ -893,7 +894,7 @@ def generate_article_html(article, all_articles):
         </div>
     </article>
     <script src="../js/icons.js"></script>
-    <script>
+    <script defer>
     (function(){{
         var url = window.location.href;
         var title = document.title;
@@ -905,8 +906,11 @@ def generate_article_html(article, all_articles):
         if (copy) copy.addEventListener('click', function(){{navigator.clipboard.writeText(url);alert('連結已複製！');}});
     }})();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
+
+    <!-- Delay GTM to reduce unused JS impact on LCP -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.requestIdleCallback){window.requestIdleCallback(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);},{timeout:2000});}else{window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);});}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 </body>
 </html>'''
 
@@ -940,7 +944,7 @@ categories_json = json.dumps(all_categories, ensure_ascii=False)
 blog_html = f'''<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
-    <script>
+    <script defer>
     (function(){{
         var d=window.location.origin+window.location.pathname;
         var b=window.location.origin;
@@ -978,11 +982,8 @@ blog_html = f'''<!DOCTYPE html>
     <meta property="og:title" content="養生專欄 | 林燦平太極學會">
     <meta property="og:description" content="100篇太極拳健康知識文章，涵蓋入門教學、痛症舒緩、長者健康、心理健康等主題。">
     <meta property="og:url" content="https://lamtaichi.pages.dev/blog.html">
-    <meta property="og:locale" content="zh_HK">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="css/tailwind.css">
+    <meta property="og:locale" content="zh_HK"><link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/tailwind.css"></noscript>
     <style>
         html {{ scroll-behavior: smooth; }}
         .tag-chip {{ display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #d1fae5; color: #065f46; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; white-space: nowrap; }}
@@ -1130,7 +1131,7 @@ blog_html = f'''<!DOCTYPE html>
     renderArticles();
     </script>
     <script src="js/icons.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 
 </body>

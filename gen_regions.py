@@ -87,9 +87,9 @@ def gen_page(r):
       }}
     }}
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K"></script>
+    
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
-    <script>
+    <script defer>
     (function(){{
         var d=window.location.origin+window.location.pathname;
         var b=window.location.origin;
@@ -116,12 +116,8 @@ def gen_page(r):
             }}catch(e){{}}
         }});
     }})();
-    </script>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="stylesheet" href="css/tailwind.css">
+    </script><link rel="preload" href="css/tailwind.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/tailwind.css"></noscript>
     <style>html {{ scroll-behavior: smooth; }}</style>
 </head>
 <body class="font-sans text-gray-800 bg-stone-50">
@@ -250,8 +246,10 @@ def gen_page(r):
         <p class="mt-2"><a href="index.html" class="text-emerald-400 hover:text-emerald-300">返回首頁</a></p>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>lucide.createIcons();</script>
+    <script src="js/icons.js"></script>
+
+    <!-- Delay GTM to reduce unused JS impact on LCP -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(window.requestIdleCallback){window.requestIdleCallback(function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);},{timeout:2000});}else{window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-NPKZ6HZV7K';s.async=true;document.body.appendChild(s);});}gtag('js',new Date());gtag('config','G-NPKZ6HZV7K');</script>
 </body>
 </html>'''
 
